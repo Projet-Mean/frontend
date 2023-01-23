@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import{ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-deletecar',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./deletecar.component.css']
 })
 export class DeletecarComponent {
+
 
 }

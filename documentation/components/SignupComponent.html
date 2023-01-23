@@ -1,0 +1,763 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SignupComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/auth/signup/signup.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-signup</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./signup.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./signup.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-signup&#x27;,
+  templateUrl: &#x27;./signup.component.html&#x27;,
+  styleUrls: [&#x27;./signup.component.css&#x27;]
+})
+export class SignupComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;style&gt;
+  
+    /*------------------------------------------------------------------
+    [Main Stylesheet]
+    
+    Project:    Just Log
+    Version:    1.1.0
+    -------------------------------------------------------------------*/
+    
+    /*------------------------------------------------------------------
+    [Table of contents]
+    
+        1. Global style
+        2. Loader / .loader
+        3. Login page / .login_wrapper 
+        4. Media Queries / @media
+    
+    -------------------------------------------------------------------*/
+    /** GLOBAL CLASSES **/
+    
+    @import url(&#x27;https://fonts.googleapis.com/css?family&#x3D;Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;amp;display&#x3D;swap&#x27;);
+    
+    body {
+        font-family: &#x27;Nunito&#x27;, sans-serif;
+        color: #535353;
+    }
+    
+    img{
+        max-width: 100%;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+    }
+    
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: &#x27;Nunito&#x27;, sans-serif;
+    }
+    
+    /*---------- Global Style closed ----------------*/
+    
+    
+    
+    /*---------- Loader Style ----------------*/
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        text-align: center;
+        background: rgba(255,255,255,0.97);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .loader .loader_div {
+        border: 6px solid #ffebea;
+        border-radius: 50%;
+        border-top: 6px solid #ff574d;
+        width: 60px;
+        height: 60px;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /*---------- Loader Style closed ----------------*/
+    
+    
+    /*----Login page-----*/
+    .login_wrapper{
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        min-height: 100vh;
+        z-index: 9;
+        opacity: 1;
+        position: relative;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        background-image: url(./assets/images/login-bg2.jpg);
+        background-repeat: no-repeat;
+        background-position: 0 bottom;
+        background-size: cover;
+    }
+    .login_wrapper .login-inner-form {
+        color: #272323;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .login_wrapper .col-pad-0{
+        padding: 0;
+    }
+    .login_wrapper .login-inner-form .details p{
+        color: #403838;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    a.logo_text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: 170px;
+        justify-content: center;
+        margin: 0 auto 15px;
+    }
+    a.logo_text span {
+        background: #fff;
+        line-height: 1;
+        display: inline-block;
+        padding: 4px 5px 2px;
+        color: #ff574d;
+        font-weight: 700;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    .login_wrapper .login-inner-form .details p a{
+        margin-left: 3px;
+        color: #403838;
+    }
+    .login_wrapper .login-inner-form .details {
+        padding: 30px 30px;
+    }
+    .login_wrapper .login_right {
+        background-size: cover;
+        width: 100%;
+        bottom: 0;
+        border-radius: 10px 0 0 10px;
+        padding: 80px 20px;
+        background: #ff574d;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .login_wrapper .login_right:after {
+        content: &quot;\f061&quot;;
+        height: 40px;
+        width: 40px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        z-index: 1;
+        margin-top: -20px;
+        font-family: fontAwesome;
+        line-height: 40px;
+        color: #ff574d;
+        font-size: 14px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+    .login-box-12 {
+        margin: 0 auto;
+        max-width: 750px;
+        border-radius: 10px;
+        background: #fff;
+        background-size: cover;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        text-align: center;
+        overflow: hidden;
+        align-items: stretch;
+        box-shadow: 0 0 50px rgba(0,0,0,0.05);
+    }
+    .login_wrapper .btn-outline {
+        border-radius: 3px;
+        padding: 6px 30px 6px 30px;
+        color: #ff574d;
+        background: #fff;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 auto;
+        border:2px solid #fff;
+        transition: all ease 0.4s;
+    }
+    .login_wrapper .none-2{
+        display: none;
+    }
+    .login_wrapper .btn-outline:hover {
+        background: transparent;
+        text-decoration: none;
+        color: #fff;
+        border-color: #fff;
+    }
+    .login_wrapper .login-inner-form h3 {
+        margin: 0 0 25px;
+        font-size: 22px;
+        font-weight: 700;
+        font-family: &#x27;Nunito&#x27;, sans-serif;
+        color: #272323;
+        position: relative;
+        padding: 0 0 15px;
+    }
+    .login_wrapper .login-inner-form h3 span {
+        color: #ff574d;
+    }
+    .login_wrapper .login-inner-form h3:after {
+        display: block;
+        content: &quot;&quot;;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 50px;
+        height: 1px;
+        background: #ff574d;
+        margin: 0 auto;
+        bottom: 0;
+    }
+    .login_wrapper .login-inner-form .form-group {
+        margin-bottom: 20px;
+    }
+    .login_wrapper .login-inner-form .input-text {
+        outline: none;
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 15px;
+        outline: 0;
+        font-weight: 500;
+        color: #717171;
+        height: 45px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .04);
+    }
+    .login_wrapper .login-inner-form .btn-md {
+        cursor: pointer;
+        padding: 10px 50px 8px 50px;
+        height: 45px;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: &#x27;Nunito&#x27;, sans-serif;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+    .login_wrapper .login_right .social-list li {
+        display: inline-block;
+        font-size: 16px;
+    }
+    
+    .login_wrapper .login_right .logo{
+        height: 30px;
+        margin-bottom: 20px;
+    }
+    .login_wrapper .login_right p{
+        font-size: 15px;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    .login_wrapper .login_right .btn-sm{
+        padding: 6px 20px 6px 20px;
+        font-size: 13px;
+    }
+    .login_wrapper .login_right .social-list{
+        margin-top: 35px;
+        padding: 0;
+    }
+    .login_wrapper .login_right .social-list li a {
+        display: block;
+        background: rgba(0,0,0,0.07);
+        border-radius: 3px;
+        display: inline-block;
+        margin: 0 3px;
+        width: 32px;
+        height: 32px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        line-height: 32px;
+        transition: all ease 0.4s;
+    }
+    .login_wrapper .login_right .social-list li a:hover {
+        background: #fff;
+        color: #ff574d;
+        transform: translateY(-3px);
+    }
+    .login_wrapper .login-inner-form input[type&#x3D;checkbox], input[type&#x3D;radio] {
+        margin-right: 3px;
+    }
+    .login_wrapper .login-inner-form button:focus {
+        outline: none;
+        outline: 0 auto -webkit-focus-ring-color;
+    }
+    .login_wrapper .login-inner-form .btn-theme.focus, .btn-theme:focus {
+        box-shadow: none;
+    }
+    .login_wrapper .login-inner-form .btn-theme {
+        background: #ff574d;
+        border: none;
+        color: #fff;
+    }
+    .login_wrapper .login-inner-form .btn-theme:hover {
+        background: #ec4a40;
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    }
+    .login_wrapper .login-inner-form .terms{
+        margin-left: 3px;
+    }
+    .login_wrapper .login-inner-form .checkbox {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .login_wrapper .login-inner-form .form-check{
+        float: left;
+        margin-bottom: 0;
+    }
+    .login_wrapper .login-inner-form .form-check a {
+        color: #717171;
+        float: right;
+    }
+    .login_wrapper .login-inner-form .form-check-input {
+        position: absolute;
+        margin-left: 0;
+        opacity: 0;
+    }
+    .login_wrapper .login-inner-form .form-check label::before {
+        content: &quot;&quot;;
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        margin-left: -25px;
+        border: 1px solid #c5c3c3;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+    .login_wrapper .login-inner-form .form-check-label {
+        padding-left: 25px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: #403838;
+    }
+    .login_wrapper .login-inner-form .checkbox-input input[type&#x3D;&quot;checkbox&quot;]:checked + label::before {
+        background-color: #ff574d;
+        border-color: #ff574d;
+    }
+    .login_wrapper .login-inner-form input[type&#x3D;checkbox]:checked + label:before {
+        font-weight: normal;
+        color: #f3f3f3;
+        line-height: 15px;
+        font-size: 10px;
+        content: &quot;\f00c&quot;;
+        background-color: #ff574d;
+        border-color: #ff574d;
+        font-family: fontAwesome;
+    }
+    .login_wrapper .login-inner-form input[type&#x3D;checkbox], input[type&#x3D;radio] {
+        margin-top: 4px;
+    }
+    .login_wrapper .login-inner-form .checkbox a {
+        font-size: 14px;
+        color: #403838;
+        float: right;
+    }
+    
+    
+    
+    /** Media Queries 
+    -----------------------------------------------------------------------*/
+    @media (max-width: 991px) {
+        .login_wrapper .pad-0{
+            padding: 0;
+        }
+        .login_wrapper .login-box-12 {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        .login_wrapper .login-inner-form .details {
+            padding: 30px;
+        }
+        .login_wrapper .login_right {
+            border-radius:0px;
+            padding: 40px 20px;
+        }
+        .login_wrapper .login_right:after {
+            bottom: -20px;
+            top: auto;
+            left: 50%;
+            right: auto;
+            margin-left: -20px;
+            transform: rotate(90deg);
+        }
+    }
+    @media (max-width: 767px) { 
+    .login_wrapper .login-inner-form .details {
+        padding: 40px 10px 30px;
+    } 
+    }
+    
+    @media (max-width: 479px) { 
+        .login_wrapper .login-inner-form .details {
+            padding: 30px 10px;
+        }
+    }
+    
+    
+    &lt;/style&gt;
+    
+    
+    
+    &lt;!-- Main Slider --&gt;
+    
+    &lt;!-- &lt;section id&#x3D;&quot;main-slider&quot; class&#x3D;&quot;main-slider text-center&quot;&gt;
+      &lt;div class&#x3D;&quot;head-overlay&quot;&gt;
+        &lt;ul class&#x3D;&quot;bxslider&quot;&gt;
+          &lt;li&gt;
+            &lt;div class&#x3D;&quot;head-overlay&quot;&gt;
+              &lt;img src&#x3D;&quot;./assets/images/slider/1.jpg&quot;/&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;slider-text d-flex justify-content-center&quot; style&#x3D;&quot;height: 100%;&quot;&gt;
+                &lt;form (submit)&#x3D;&quot;inscri()&quot; method&#x3D;&quot;GET&quot; style&#x3D;&quot;background-color:rgba(5, 5, 5, 0.466);color: white; border-radius: 20px;text-align: center;width: 500px;float: left ;padding: 50px; min-height: 50%;margin-top: 7%;margin-left: 5%;&quot;&gt;
+                  &lt;h3&gt;Inscription&lt;/h3&gt;
+                  &lt;hr/&gt;
+                  &lt;label style&#x3D;&quot;width: 100px;margin: 10px;&quot;&gt;Nom:&lt;/label&gt; &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;nom&quot; [(ngModel)]&#x3D;&quot;nom&quot; style&#x3D;&quot;width: 200px;&quot;&gt;
+                  &lt;label style&#x3D;&quot;width: 100px;margin: 10px&quot;&gt;Adresse:&lt;/label&gt; &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;adresse&quot; [(ngModel)]&#x3D;&quot;adresse&quot; style&#x3D;&quot;width: 200px;&quot;&gt;
+                  &lt;label style&#x3D;&quot;width: 100px;margin: 10px&quot;&gt;Mail:&lt;/label&gt; &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;login&quot; [(ngModel)]&#x3D;&quot;mail&quot; style&#x3D;&quot;width: 200px;&quot;&gt;
+                  &lt;label style&#x3D;&quot;width: 100px;margin: 10px&quot;&gt;Mots de passe:&lt;/label&gt; &lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;mdp&quot;[(ngModel)]&#x3D;&quot;mdp&quot; style&#x3D;&quot;width: 200px;&quot;&gt;
+                  &lt;button style&#x3D;&quot;margin-top:20px;width: 250px;border-radius: 50px;&quot; class&#x3D;&quot;btn btn-outline-succes&quot; type&#x3D;&quot;submit&quot;&gt;Inscrire&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt; --&gt;
+    
+    &lt;div class&#x3D;&quot;login_wrapper&quot;&gt;
+      &lt;div class&#x3D;&quot;container&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-12 pad-0&quot;&gt;
+              &lt;div class&#x3D;&quot;row login-box-12&quot;&gt;
+                &lt;div class&#x3D;&quot;col-lg-5 col-md-12 col-sm-12 px-0&quot;&gt;
+                    &lt;div class&#x3D;&quot;login_right w-100&quot;&gt;
+                        &lt;img src&#x3D;&quot;./assets/images/voiture.gif&quot; alt&#x3D;&quot;voiture&quot;&gt;
+                        &lt;ul class&#x3D;&quot;social-list clearfix&quot;&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-google-plus&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;col-lg-7 col-sm-12&quot;&gt;
+                      &lt;div class&#x3D;&quot;login-inner-form&quot;&gt;
+                          &lt;div class&#x3D;&quot;details&quot;&gt;
+                              &lt;h3&gt;Create &lt;span&gt;your account&lt;/span&gt;&lt;/h3&gt;
+                              &lt;form action&#x3D;&quot;http://uiwebsoft.com/justlog/index.html&quot; method&#x3D;&quot;GET&quot;&gt;
+                                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                      &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;FullName&quot; class&#x3D;&quot;input-text&quot; placeholder&#x3D;&quot;Full Name&quot;&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                      &lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;Password&quot; class&#x3D;&quot;input-text&quot; placeholder&#x3D;&quot;Password&quot;&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                      &lt;input type&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot; class&#x3D;&quot;input-text&quot; placeholder&#x3D;&quot;Email Address&quot;&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class&#x3D;&quot;checkbox clearfix&quot;&gt;
+                                      &lt;div class&#x3D;&quot;form-check checkbox-input&quot;&gt;
+                                          &lt;input class&#x3D;&quot;form-check-input&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;&quot; id&#x3D;&quot;termServices&quot;&gt;
+                                          &lt;label class&#x3D;&quot;form-check-label&quot; for&#x3D;&quot;termServices&quot;&gt;
+                                              I agree to the terms of service
+                                          &lt;/label&gt;
+                                      &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                      &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn-md btn-theme btn-block&quot;&gt;Register&lt;/button&gt;
+                                  &lt;/div&gt;
+                              &lt;/form&gt;
+                              &lt;p&gt;Already a member?&lt;a [routerLink]&#x3D;&quot;[&#x27;login&#x27;]&quot;&gt; Login here&lt;/a&gt;&lt;/p&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    
+    
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./signup.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><style>      /*------------------------------------------------------------------    [Main Stylesheet]        Project:    Just Log    Version:    1.1.0    -------------------------------------------------------------------*/        /*------------------------------------------------------------------    [Table of contents]            1. Global style        2. Loader / .loader        3. Login page / .login_wrapper         4. Media Queries / @media        -------------------------------------------------------------------*/    /** GLOBAL CLASSES **/        @import url(\'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap\');        body {        font-family: \'Nunito\', sans-serif;        color: #535353;    }        img{        max-width: 100%;    }        .form-control:focus {        box-shadow: none;    }        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {        font-family: \'Nunito\', sans-serif;    }        /*---------- Global Style closed ----------------*/                /*---------- Loader Style ----------------*/    .loader {        position: fixed;        top: 0;        left: 0;        width: 100%;        height: 100%;        z-index: 999;        text-align: center;        background: rgba(255,255,255,0.97);        display: flex;        align-items: center;        justify-content: center;    }    .loader .loader_div {        border: 6px solid #ffebea;        border-radius: 50%;        border-top: 6px solid #ff574d;        width: 60px;        height: 60px;        -webkit-animation: spin 1.5s linear infinite;        animation: spin 1.5s linear infinite;    }    @-webkit-keyframes spin {      0% { -webkit-transform: rotate(0deg); }      100% { -webkit-transform: rotate(360deg); }    }        @keyframes spin {      0% { transform: rotate(0deg); }      100% { transform: rotate(360deg); }    }    /*---------- Loader Style closed ----------------*/            /*----Login page-----*/    .login_wrapper{        top: 0;        width: 100%;        bottom: 0;        min-height: 100vh;        z-index: 9;        opacity: 1;        position: relative;        display: -webkit-box;        display: -moz-box;        display: -ms-flexbox;        display: -webkit-flex;        display: flex;        justify-content: center;        align-items: center;        padding: 30px 0;        background-image: url(./assets/images/login-bg2.jpg);        background-repeat: no-repeat;        background-position: 0 bottom;        background-size: cover;    }    .login_wrapper .login-inner-form {        color: #272323;        text-align: center;        height: 100%;        display: flex;        flex-direction: column;        justify-content: center;    }    .login_wrapper .col-pad-0{        padding: 0;    }    .login_wrapper .login-inner-form .details p{        color: #403838;        font-weight: 400;        font-size: 15px;    }    a.logo_text {        color: #fff;        font-size: 30px;        font-weight: bold;        text-decoration: none;        display: flex;        align-items: center;        width: 170px;        justify-content: center;        margin: 0 auto 15px;    }    a.logo_text span {        background: #fff;        line-height: 1;        display: inline-block;        padding: 4px 5px 2px;        color: #ff574d;        font-weight: 700;        border-radius: 4px;        margin-right: 10px;    }        .login_wrapper .login-inner-form .details p a{        margin-left: 3px;        color: #403838;    }    .login_wrapper .login-inner-form .details {        padding: 30px 30px;    }    .login_wrapper .login_right {        background-size: cover;        width: 100%;        bottom: 0;        border-radius: 10px 0 0 10px;        padding: 80px 20px;        background: #ff574d;        position: relative;        height: 100%;        display: flex;        flex-direction: column;        justify-content: center;    }    .login_wrapper .login_right:after {        content: "\f061";        height: 40px;        width: 40px;        background: #fff;        border-radius: 50%;        display: block;        position: absolute;        right: -20px;        top: 50%;        z-index: 1;        margin-top: -20px;        font-family: fontAwesome;        line-height: 40px;        color: #ff574d;        font-size: 14px;        box-shadow: 0 0 20px rgba(0,0,0,0.15);    }    .login-box-12 {        margin: 0 auto;        max-width: 750px;        border-radius: 10px;        background: #fff;        background-size: cover;        top: 0;        bottom: 0;        opacity: 1;        text-align: center;        overflow: hidden;        align-items: stretch;        box-shadow: 0 0 50px rgba(0,0,0,0.05);    }    .login_wrapper .btn-outline {        border-radius: 3px;        padding: 6px 30px 6px 30px;        color: #ff574d;        background: #fff;        letter-spacing: 1px;        font-size: 14px;        font-weight: 600;        margin: 0 auto;        border:2px solid #fff;        transition: all ease 0.4s;    }    .login_wrapper .none-2{        display: none;    }    .login_wrapper .btn-outline:hover {        background: transparent;        text-decoration: none;        color: #fff;        border-color: #fff;    }    .login_wrapper .login-inner-form h3 {        margin: 0 0 25px;        font-size: 22px;        font-weight: 700;        font-family: \'Nunito\', sans-serif;        color: #272323;        position: relative;        padding: 0 0 15px;    }    .login_wrapper .login-inner-form h3 span {        color: #ff574d;    }    .login_wrapper .login-inner-form h3:after {        display: block;        content: "";        position: absolute;        left: 0;        right: 0;        width: 50px;        height: 1px;        background: #ff574d;        margin: 0 auto;        bottom: 0;    }    .login_wrapper .login-inner-form .form-group {        margin-bottom: 20px;    }    .login_wrapper .login-inner-form .input-text {        outline: none;        width: 100%;        padding: 10px 20px;        font-size: 15px;        outline: 0;        font-weight: 500;        color: #717171;        height: 45px;        border-radius: 3px;        border: 1px solid #ddd;        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .04);    }    .login_wrapper .login-inner-form .btn-md {        cursor: pointer;        padding: 10px 50px 8px 50px;        height: 45px;        letter-spacing: 1px;        font-size: 14px;        font-weight: 600;        font-family: \'Nunito\', sans-serif;        border-radius: 3px;        text-transform: uppercase;    }    .login_wrapper .login_right .social-list li {        display: inline-block;        font-size: 16px;    }        .login_wrapper .login_right .logo{        height: 30px;        margin-bottom: 20px;    }    .login_wrapper .login_right p{        font-size: 15px;        color: #fff;        margin-bottom: 30px;    }    .login_wrapper .login_right .btn-sm{        padding: 6px 20px 6px 20px;        font-size: 13px;    }    .login_wrapper .login_right .social-list{        margin-top: 35px;        padding: 0;    }    .login_wrapper .login_right .social-list li a {        display: block;        background: rgba(0,0,0,0.07);        border-radius: 3px;        display: inline-block;        margin: 0 3px;        width: 32px;        height: 32px;        color: rgb(255, 255, 255);        font-size: 16px;        line-height: 32px;        transition: all ease 0.4s;    }    .login_wrapper .login_right .social-list li a:hover {        background: #fff;        color: #ff574d;        transform: translateY(-3px);    }    .login_wrapper .login-inner-form input[type=checkbox], input[type=radio] {        margin-right: 3px;    }    .login_wrapper .login-inner-form button:focus {        outline: none;        outline: 0 auto -webkit-focus-ring-color;    }    .login_wrapper .login-inner-form .btn-theme.focus, .btn-theme:focus {        box-shadow: none;    }    .login_wrapper .login-inner-form .btn-theme {        background: #ff574d;        border: none;        color: #fff;    }    .login_wrapper .login-inner-form .btn-theme:hover {        background: #ec4a40;        box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);    }    .login_wrapper .login-inner-form .terms{        margin-left: 3px;    }    .login_wrapper .login-inner-form .checkbox {        margin-bottom: 20px;        font-size: 14px;    }    .login_wrapper .login-inner-form .form-check{        float: left;        margin-bottom: 0;    }    .login_wrapper .login-inner-form .form-check a {        color: #717171;        float: right;    }    .login_wrapper .login-inner-form .form-check-input {        position: absolute;        margin-left: 0;        opacity: 0;    }    .login_wrapper .login-inner-form .form-check label::before {        content: "";        display: inline-block;        position: absolute;        width: 17px;        height: 17px;        margin-left: -25px;        border: 1px solid #c5c3c3;        border-radius: 3px;        background-color: #fff;    }    .login_wrapper .login-inner-form .form-check-label {        padding-left: 25px;        margin-bottom: 0;        font-size: 14px;        color: #403838;    }    .login_wrapper .login-inner-form .checkbox-input input[type="checkbox"]:checked + label::before {        background-color: #ff574d;        border-color: #ff574d;    }    .login_wrapper .login-inner-form input[type=checkbox]:checked + label:before {        font-weight: normal;        color: #f3f3f3;        line-height: 15px;        font-size: 10px;        content: "\f00c";        background-color: #ff574d;        border-color: #ff574d;        font-family: fontAwesome;    }    .login_wrapper .login-inner-form input[type=checkbox], input[type=radio] {        margin-top: 4px;    }    .login_wrapper .login-inner-form .checkbox a {        font-size: 14px;        color: #403838;        float: right;    }                /** Media Queries     -----------------------------------------------------------------------*/    @media (max-width: 991px) {        .login_wrapper .pad-0{            padding: 0;        }        .login_wrapper .login-box-12 {            margin: 0 auto;            max-width: 400px;        }        .login_wrapper .login-inner-form .details {            padding: 30px;        }        .login_wrapper .login_right {            border-radius:0px;            padding: 40px 20px;        }        .login_wrapper .login_right:after {            bottom: -20px;            top: auto;            left: 50%;            right: auto;            margin-left: -20px;            transform: rotate(90deg);        }    }    @media (max-width: 767px) {     .login_wrapper .login-inner-form .details {        padding: 40px 10px 30px;    }     }        @media (max-width: 479px) {         .login_wrapper .login-inner-form .details {            padding: 30px 10px;        }    }            </style>                <!-- Main Slider -->        <!-- <section id="main-slider" class="main-slider text-center">      <div class="head-overlay">        <ul class="bxslider">          <li>            <div class="head-overlay">              <img src="./assets/images/slider/1.jpg"/>            </div>            <div class="slider-text d-flex justify-content-center" style="height: 100%;">                <form (submit)="inscri()" method="GET" style="background-color:rgba(5, 5, 5, 0.466);color: white; border-radius: 20px;text-align: center;width: 500px;float: left ;padding: 50px; min-height: 50%;margin-top: 7%;margin-left: 5%;">                  <h3>Inscription</h3>                  <hr/>                  <label style="width: 100px;margin: 10px;">Nom:</label> <input type="text" name="nom" [(ngModel)]="nom" style="width: 200px;">                  <label style="width: 100px;margin: 10px">Adresse:</label> <input type="text" name="adresse" [(ngModel)]="adresse" style="width: 200px;">                  <label style="width: 100px;margin: 10px">Mail:</label> <input type="text" name="login" [(ngModel)]="mail" style="width: 200px;">                  <label style="width: 100px;margin: 10px">Mots de passe:</label> <input type="password" name="mdp"[(ngModel)]="mdp" style="width: 200px;">                  <button style="margin-top:20px;width: 250px;border-radius: 50px;" class="btn btn-outline-succes" type="submit">Inscrire</button>                </form>            </div>          </li>        </ul>      </div>    </section> -->        <div class="login_wrapper">      <div class="container">          <div class="col-md-12 pad-0">              <div class="row login-box-12">                <div class="col-lg-5 col-md-12 col-sm-12 px-0">                    <div class="login_right w-100">                        <img src="./assets/images/voiture.gif" alt="voiture">                        <ul class="social-list clearfix">                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                        </ul>                    </div>                  </div>                  <div class="col-lg-7 col-sm-12">                      <div class="login-inner-form">                          <div class="details">                              <h3>Create <span>your account</span></h3>                              <form action="http://uiwebsoft.com/justlog/index.html" method="GET">                                <div class="form-group">                                      <input type="text" name="FullName" class="input-text" placeholder="Full Name">                                  </div>                                  <div class="form-group">                                      <input type="password" name="Password" class="input-text" placeholder="Password">                                  </div>                                  <div class="form-group">                                      <input type="email" name="email" class="input-text" placeholder="Email Address">                                  </div>                                  <div class="checkbox clearfix">                                      <div class="form-check checkbox-input">                                          <input class="form-check-input" type="checkbox" value="" id="termServices">                                          <label class="form-check-label" for="termServices">                                              I agree to the terms of service                                          </label>                                      </div>                                  </div>                                  <div class="form-group">                                      <button type="submit" class="btn-md btn-theme btn-block">Register</button>                                  </div>                              </form>                              <p>Already a member?<a [routerLink]="[\'login\']"> Login here</a></p>                          </div>                      </div>                  </div>              </div>          </div>      </div>    </div>            </div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AddcarComponent', 'selector': 'app-addcar'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AulayoutComponent', 'selector': 'app-aulayout'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeletecarComponent', 'selector': 'app-deletecar'},{'name': 'EquipeComponent', 'selector': 'app-equipe'},{'name': 'EtatComponent', 'selector': 'app-etat'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LougoutComponent', 'selector': 'app-lougout'},{'name': 'PaiementComponent', 'selector': 'app-paiement'},{'name': 'PfooterComponent', 'selector': 'app-pfooter'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'PrivacyComponent', 'selector': 'app-privacy'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'ReservationComponent', 'selector': 'app-reservation'},{'name': 'ServiceComponent', 'selector': 'app-service'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'},{'name': 'SignoutComponent', 'selector': 'app-signout'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TermeComponent', 'selector': 'app-terme'},{'name': 'UpdatecarComponent', 'selector': 'app-updatecar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SignupComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SignupComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

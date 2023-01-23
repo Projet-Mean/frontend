@@ -1,0 +1,535 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PfooterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/public/pfooter/pfooter.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-pfooter</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./pfooter.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./pfooter.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-pfooter&#x27;,
+  templateUrl: &#x27;./pfooter.component.html&#x27;,
+  styleUrls: [&#x27;./pfooter.component.css&#x27;]
+})
+export class PfooterComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;style&gt;
+    .main-slider{
+    padding-top: 0px;
+  }
+    .site-footer
+    {
+      background-color:#26272b;
+      padding:45px 0 20px;
+      font-size:15px;
+      line-height:24px;
+      color:#737373;
+    }
+    .site-footer hr
+    {
+      border-top-color:#bbb;
+      opacity:0.5
+    }
+    .site-footer hr.small
+    {
+      margin:20px 0
+    }
+    .site-footer h6
+    {
+      color:#fff;
+      font-size:16px;
+      text-transform:uppercase;
+      margin-top:5px;
+      letter-spacing:2px
+    }
+    .site-footer a
+    {
+      color:#737373;
+    }
+    .site-footer a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links
+    {
+      padding-left:0;
+      list-style:none
+    }
+    .footer-links li
+    {
+      display:block
+    }
+    .footer-links a
+    {
+      color:#737373
+    }
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links.inline li
+    {
+      display:inline-block
+    }
+    .site-footer .social-icons
+    {
+      text-align:right
+    }
+    .site-footer .social-icons a
+    {
+      width:40px;
+      height:40px;
+      line-height:40px;
+      margin-left:6px;
+      margin-right:0;
+      border-radius:100%;
+      background-color:#33353d
+    }
+    .copyright-text
+    {
+      margin:0
+    }
+    @media (max-width:991px)
+    {
+      .site-footer [class^&#x3D;col-]
+      {
+        margin-bottom:30px
+      }
+    }
+    @media (max-width:767px)
+    {
+      .site-footer
+      {
+        padding-bottom:0
+      }
+      .site-footer .copyright-text,.site-footer .social-icons
+      {
+        text-align:center
+      }
+    }
+    .social-icons
+    {
+      padding-left:0;
+      margin-bottom:0;
+      list-style:none
+    }
+    .social-icons li
+    {
+      display:inline-block;
+      margin-bottom:4px
+    }
+    .social-icons li.title
+    {
+      margin-right:15px;
+      text-transform:uppercase;
+      color:#96a2b2;
+      font-weight:700;
+      font-size:13px
+    }
+    .social-icons a{
+      background-color:#eceeef;
+      color:#818a91;
+      font-size:16px;
+      display:inline-block;
+      line-height:44px;
+      width:44px;
+      height:44px;
+      text-align:center;
+      margin-right:8px;
+      border-radius:100%;
+      -webkit-transition:all .2s linear;
+      -o-transition:all .2s linear;
+      transition:all .2s linear
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+      color:#fff;
+      background-color:#29aafe
+    }
+    .social-icons.size-sm a
+    {
+      line-height:34px;
+      height:34px;
+      width:34px;
+      font-size:14px
+    }
+    .social-icons a.facebook:hover
+    {
+      background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+      background-color:#00aced
+    }
+    .social-icons a.linkedin:hover
+    {
+      background-color:#007bb6
+    }
+    .social-icons a.dribbble:hover
+    {
+      background-color:#ea4c89
+    }
+    @media (max-width:767px)
+    {
+      .social-icons li.title
+      {
+        display:block;
+        margin-right:0;
+        font-weight:600
+      }
+    }
+
+    /*end-footer*/
+&lt;/style&gt;
+&lt;footer class&#x3D;&quot;site-footer&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-sm-12 col-md-6&quot;&gt;
+          &lt;h6&gt;About-us&lt;/h6&gt;
+          &lt;!-- &lt;p class&#x3D;&quot;text-justify&quot;&gt;Nous offrons une gamme complète de services de garage aux propriétaires de véhicules situés dans la région de Tucson. Tous les services mécaniques sont effectués par des mécaniciens hautement qualifiés. Nous pouvons gérer n&#x27;importe quel problème de voiture.
+
+            Nous offrons une gamme complète de services de garage aux propriétaires de véhicules à Tucson. Nos professionnels savent comment gérer une large gamme de services automobiles. Que vous conduisiez une voiture de tourisme, un camion de taille moyenne ou un VUS, nos mécaniciens s&#x27;efforcent de s&#x27;assurer que votre véhicule fonctionnera au mieux avant de quitter notre atelier automobile. Que vous conduisiez un camion de taille moyenne, une voiture de tourisme ou un VUS, nos mécaniciens s&#x27;efforcent d&#x27;assurer
+            
+            &lt;/p&gt; --&gt;
+            &lt;ul class&#x3D;&quot;footer-links&quot;&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Andoharanofotsy &lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt; Antananarivo 102&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Mobile     :  034 578 926&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Assistance :  034 578 936&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Email      : sgarage@gmail.com&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Contactez-nous&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;col-xs-6 col-md-3&quot;&gt;
+          &lt;h6&gt;Nos services&lt;/h6&gt;
+          &lt;ul class&#x3D;&quot;footer-links&quot;&gt;
+            &lt;li&gt;&lt;a href&#x3D;&quot;http://scanfcode.com/category/c-language/&quot;&gt;Anti démarrage&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href&#x3D;&quot;http://scanfcode.com/category/front-end-development/&quot;&gt;Réparation Compteur kilométrique&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href&#x3D;&quot;http://scanfcode.com/category/back-end-development/&quot;&gt;Réparation Colonne direction&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href&#x3D;&quot;http://scanfcode.com/category/java-programming-language/&quot;&gt;Reprogrammation puissance moteur&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href&#x3D;&quot;http://scanfcode.com/category/android/&quot;&gt;Filtre à particules&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href&#x3D;&quot;http://scanfcode.com/category/templates/&quot;&gt;Adblue&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;col-xs-6 col-md-3&quot;&gt;
+          &lt;h6&gt;Quick Links&lt;/h6&gt;
+          &lt;ul class&#x3D;&quot;footer-links&quot;&gt;
+            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;about-us&#x27;]&quot;&gt;A propos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;contact&#x27;]&quot; &gt;Contactez-nous&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;terme-condition&#x27;]&quot;&gt;Termes et condition&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;privacy&#x27;]&quot;&gt;Politique de confidentialité&lt;/a&gt;&lt;/li&gt;
+            
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;hr&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-8 col-sm-6 col-xs-12&quot;&gt;
+          &lt;p class&#x3D;&quot;copyright-text&quot;&gt;Copyright &amp;copy; 2023 All Rights Reserved by 
+       &lt;a href&#x3D;&quot;#&quot;&gt;Andrianjafy Baovola Santatra | Ranaivoson Valisoa&lt;/a&gt;.
+          &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;col-md-4 col-sm-6 col-xs-12&quot;&gt;
+          &lt;ul class&#x3D;&quot;social-icons&quot;&gt;
+            &lt;li&gt;&lt;a class&#x3D;&quot;facebook&quot; href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class&#x3D;&quot;twitter&quot; href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class&#x3D;&quot;dribbble&quot; href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-dribbble&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class&#x3D;&quot;linkedin&quot; href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;   
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+
+
+&lt;div id&#x3D;&quot;scroll-to-top&quot; class&#x3D;&quot;scroll-to-top&quot;&gt;
+  &lt;span&gt;
+    &lt;i class&#x3D;&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;&lt;!-- /#scroll-to-top --&gt;
+
+
+
+
+&lt;!-- Include jQuery Js --&gt;
+&lt;script src&#x3D;&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Include jQuery Js --&gt;
+&lt;script&gt;window.jQuery || document.write(&#x27;&lt;script src&#x3D;&quot;assets/js/jquery-1.11.2.min.js&quot;&gt;&lt;\/script&gt;&#x27;)&lt;/script&gt;
+&lt;!-- Include WOW Min Js --&gt;
+&lt;script src&#x3D;&quot;./assets/assets/js/wow.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Google Maps Script --&gt;
+&lt;script src&#x3D;&quot;http://maps.google.com/maps/api/js?sensor&#x3D;true&quot;&gt;&lt;/script&gt;
+&lt;!-- Gmap3.js For Static Maps --&gt;
+&lt;script src&#x3D;&quot;./assets/assets/js/gmap3.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Include Waypoint Js --&gt;
+&lt;script src&#x3D;&quot;//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Include Ajax MailChimp Js --&gt;
+&lt;script src&#x3D;&quot;./assets/assets/js/jquery.ajaxchimp.min.js&quot;&gt;&lt;/script&gt;
+  &lt;!-- Include Custom Js &lt;/--&gt;
+&lt;script src&#x3D;&quot;./assets/assets/js/custom.min.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;script&gt;
+(function(i,s,o,g,r,a,m){i[&#x27;GoogleAnalyticsObject&#x27;]&#x3D;r;i[r]&#x3D;i[r]||function(){
+(i[r].q&#x3D;i[r].q||[]).push(arguments)},i[r].l&#x3D;1*new Date();a&#x3D;s.createElement(o),
+m&#x3D;s.getElementsByTagName(o)[0];a.async&#x3D;1;a.src&#x3D;g;m.parentNode.insertBefore(a,m)
+})(window,document,&#x27;script&#x27;,&#x27;//www.google-analytics.com/analytics.js&#x27;,&#x27;ga&#x27;);
+
+ga(&#x27;create&#x27;, &#x27;UA-63948535-1&#x27;, &#x27;auto&#x27;);
+ga(&#x27;send&#x27;, &#x27;pageview&#x27;);
+
+&lt;/script&gt;
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./pfooter.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><style>    .main-slider{    padding-top: 0px;  }    .site-footer    {      background-color:#26272b;      padding:45px 0 20px;      font-size:15px;      line-height:24px;      color:#737373;    }    .site-footer hr    {      border-top-color:#bbb;      opacity:0.5    }    .site-footer hr.small    {      margin:20px 0    }    .site-footer h6    {      color:#fff;      font-size:16px;      text-transform:uppercase;      margin-top:5px;      letter-spacing:2px    }    .site-footer a    {      color:#737373;    }    .site-footer a:hover    {      color:#3366cc;      text-decoration:none;    }    .footer-links    {      padding-left:0;      list-style:none    }    .footer-links li    {      display:block    }    .footer-links a    {      color:#737373    }    .footer-links a:active,.footer-links a:focus,.footer-links a:hover    {      color:#3366cc;      text-decoration:none;    }    .footer-links.inline li    {      display:inline-block    }    .site-footer .social-icons    {      text-align:right    }    .site-footer .social-icons a    {      width:40px;      height:40px;      line-height:40px;      margin-left:6px;      margin-right:0;      border-radius:100%;      background-color:#33353d    }    .copyright-text    {      margin:0    }    @media (max-width:991px)    {      .site-footer [class^=col-]      {        margin-bottom:30px      }    }    @media (max-width:767px)    {      .site-footer      {        padding-bottom:0      }      .site-footer .copyright-text,.site-footer .social-icons      {        text-align:center      }    }    .social-icons    {      padding-left:0;      margin-bottom:0;      list-style:none    }    .social-icons li    {      display:inline-block;      margin-bottom:4px    }    .social-icons li.title    {      margin-right:15px;      text-transform:uppercase;      color:#96a2b2;      font-weight:700;      font-size:13px    }    .social-icons a{      background-color:#eceeef;      color:#818a91;      font-size:16px;      display:inline-block;      line-height:44px;      width:44px;      height:44px;      text-align:center;      margin-right:8px;      border-radius:100%;      -webkit-transition:all .2s linear;      -o-transition:all .2s linear;      transition:all .2s linear    }    .social-icons a:active,.social-icons a:focus,.social-icons a:hover    {      color:#fff;      background-color:#29aafe    }    .social-icons.size-sm a    {      line-height:34px;      height:34px;      width:34px;      font-size:14px    }    .social-icons a.facebook:hover    {      background-color:#3b5998    }    .social-icons a.twitter:hover    {      background-color:#00aced    }    .social-icons a.linkedin:hover    {      background-color:#007bb6    }    .social-icons a.dribbble:hover    {      background-color:#ea4c89    }    @media (max-width:767px)    {      .social-icons li.title      {        display:block;        margin-right:0;        font-weight:600      }    }    /*end-footer*/</style><footer class="site-footer">    <div class="container">      <div class="row">        <div class="col-sm-12 col-md-6">          <h6>About-us</h6>          <!-- <p class="text-justify">Nous offrons une gamme complète de services de garage aux propriétaires de véhicules situés dans la région de Tucson. Tous les services mécaniques sont effectués par des mécaniciens hautement qualifiés. Nous pouvons gérer n\'importe quel problème de voiture.            Nous offrons une gamme complète de services de garage aux propriétaires de véhicules à Tucson. Nos professionnels savent comment gérer une large gamme de services automobiles. Que vous conduisiez une voiture de tourisme, un camion de taille moyenne ou un VUS, nos mécaniciens s\'efforcent de s\'assurer que votre véhicule fonctionnera au mieux avant de quitter notre atelier automobile. Que vous conduisiez un camion de taille moyenne, une voiture de tourisme ou un VUS, nos mécaniciens s\'efforcent d\'assurer                        </p> -->            <ul class="footer-links">              <li><a href="">Andoharanofotsy </a></li>              <li><a href=""> Antananarivo 102</a></li>              <li><a href="">Mobile     :  034 578 926</a></li>              <li><a href="">Assistance :  034 578 936</a></li>              <li><a href="">Email      : sgarage@gmail.com</a></li>              <li><a href="">Contactez-nous</a></li>            </ul>        </div>        <div class="col-xs-6 col-md-3">          <h6>Nos services</h6>          <ul class="footer-links">            <li><a href="http://scanfcode.com/category/c-language/">Anti démarrage</a></li>            <li><a href="http://scanfcode.com/category/front-end-development/">Réparation Compteur kilométrique</a></li>            <li><a href="http://scanfcode.com/category/back-end-development/">Réparation Colonne direction</a></li>            <li><a href="http://scanfcode.com/category/java-programming-language/">Reprogrammation puissance moteur</a></li>            <li><a href="http://scanfcode.com/category/android/">Filtre à particules</a></li>            <li><a href="http://scanfcode.com/category/templates/">Adblue</a></li>          </ul>        </div>        <div class="col-xs-6 col-md-3">          <h6>Quick Links</h6>          <ul class="footer-links">            <li><a [routerLink]="[\'about-us\']">A propos</a></li>            <li><a [routerLink]="[\'contact\']" >Contactez-nous</a></li>            <li><a [routerLink]="[\'terme-condition\']">Termes et condition</a></li>            <li><a [routerLink]="[\'privacy\']">Politique de confidentialité</a></li>                      </ul>        </div>      </div>      <hr>    </div>    <div class="container">      <div class="row">        <div class="col-md-8 col-sm-6 col-xs-12">          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by        <a href="#">Andrianjafy Baovola Santatra | Ranaivoson Valisoa</a>.          </p>        </div>        <div class="col-md-4 col-sm-6 col-xs-12">          <ul class="social-icons">            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>             </ul>        </div>      </div>    </div></footer><div id="scroll-to-top" class="scroll-to-top">  <span>    <i class="fa fa-chevron-up"></i>  </span></div><!-- /#scroll-to-top --><!-- Include jQuery Js --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><!-- Include jQuery Js --><script>window.jQuery || document.write(\'<script src="assets/js/jquery-1.11.2.min.js"><\/script>\')</script><!-- Include WOW Min Js --><script src="./assets/assets/js/wow.min.js"></script><!-- Google Maps Script --><script src="http://maps.google.com/maps/api/js?sensor=true"></script><!-- Gmap3.js For Static Maps --><script src="./assets/assets/js/gmap3.js"></script><!-- Include Waypoint Js --><script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script><!-- Include Ajax MailChimp Js --><script src="./assets/assets/js/jquery.ajaxchimp.min.js"></script>  <!-- Include Custom Js </--><script src="./assets/assets/js/custom.min.js"></script><script>(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,\'script\',\'//www.google-analytics.com/analytics.js\',\'ga\');ga(\'create\', \'UA-63948535-1\', \'auto\');ga(\'send\', \'pageview\');</script></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AddcarComponent', 'selector': 'app-addcar'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AulayoutComponent', 'selector': 'app-aulayout'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeletecarComponent', 'selector': 'app-deletecar'},{'name': 'EquipeComponent', 'selector': 'app-equipe'},{'name': 'EtatComponent', 'selector': 'app-etat'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LougoutComponent', 'selector': 'app-lougout'},{'name': 'PaiementComponent', 'selector': 'app-paiement'},{'name': 'PfooterComponent', 'selector': 'app-pfooter'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'PrivacyComponent', 'selector': 'app-privacy'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'ReservationComponent', 'selector': 'app-reservation'},{'name': 'ServiceComponent', 'selector': 'app-service'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'},{'name': 'SignoutComponent', 'selector': 'app-signout'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TermeComponent', 'selector': 'app-terme'},{'name': 'UpdatecarComponent', 'selector': 'app-updatecar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PfooterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PfooterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

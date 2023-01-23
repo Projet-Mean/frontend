@@ -1,0 +1,409 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PrivacyComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/public/privacy/privacy.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-privacy</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./privacy.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./privacy.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-privacy&#x27;,
+  templateUrl: &#x27;./privacy.component.html&#x27;,
+  styleUrls: [&#x27;./privacy.component.css&#x27;]
+})
+export class PrivacyComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt; Article 1&lt;/h1&gt;
+
+&lt;p&gt;Cette politique de confidentialité s’applique au site : Garage des Lys. La présente politique de confidentialité a pour but d’exposer aux utilisateurs du site :
+
+    La manière dont sont collectées et traitées leurs données à caractère personnel. Doivent être considérées comme données personnelles toutes les données étant susceptibles d’identifier un utilisateur. Il s’agit notamment du prénom et du nom, de l’âge, de l’adresse postale, l’adresse mail, la localisation de l’utilisateur ou encore son adresse IP ; 
+    Quels sont les droits des utilisateurs concernant ces données ; 
+    Qui est responsable du traitement des données à caractère personnel collectées et traitées ; 
+    A qui ces données sont transmises ; 
+    Éventuellement, la politique du site en matière de fichiers « cookies ». 
+
+Cette politique de confidentialité complète les mentions légales.&lt;/p&gt;
+&lt;h1&gt; Article 2&lt;/h1&gt;
+&lt;p&gt;principes généraux en matière de collecte et de traitement de données
+
+Conformément aux dispositions de l’article 5 du Règlement européen 2016/679, la collecte et le traitement des données des utilisateurs du site respectent les principes suivants :
+
+    Licéité, loyauté et transparence : les données ne peuvent être collectées et traitées qu’avec le consentement de l’utilisateur propriétaire des données. A chaque fois que des données à caractère personnel seront collectées, il sera indiqué à l’utilisateur que ses données sont collectées, et pour quelles raisons ses données sont collectées ;
+    Finalités limitées : la collecte et le traitement des données sont exécutés pour répondre à un ou plusieurs objectifs déterminés dans les présentes conditions générales d’utilisation ;
+    Minimisation de la collecte et du traitement des données : seules les données nécessaires à la bonne exécution des objectifs poursuivis par le site sont collectées ;
+    Conservation des données réduites dans le temps : les données sont conservées pour une durée limitée, dont l’utilisateur est informé. Si la durée de conservation ne peut être communiquée à l’utilisateur ;
+    Intégrité et confidentialité des données collectées et traitées : le responsable du traitement des données s’engage à garantir l’intégrité et la confidentialité des données collectées.
+
+Afin d’être licites, et ce conformément aux exigences de l’article 6 du règlement européen 2016/679, la collecte et le traitement des données à caractère personnel ne pourront intervenir que s’ils respectent au moins l’une des conditions ci-après énumérées :
+
+    L’utilisateur a expressément consenti au traitement ;
+    Le traitement est nécessaire à la bonne exécution d’un contrat ;
+    Le traitement répond à une obligation légale ;
+    Le traitement s’explique par une nécessité liée à la sauvegarde des intérêts vitaux de la personne concernée ou d’une autre personne physique ;
+    Le traitement peut s’expliquer par une nécessité liée à l’exécution d’une mission d’intérêt public ou qui relève de l’exercice de l’autorité publique ;
+    Le traitement et la collecte des données à caractère personnel sont nécessaires aux fins des intérêts légitimes et privés poursuivis par le responsable du traitement ou par un tiers.
+
+ &lt;/p&gt;
+    &lt;h1&gt; Article 3&lt;/h1&gt;
+données à caractère personnel collectées et traitées dans le cadre de la navigation
+Données collectées et traitées et mode de collecte :
+
+Les données à caractère personnel collectées sur le site Garage des Lys sont les suivantes :
+
+Toutes données utiles dans le cadre du bon fonctionnement du site internet, des services proposés et des plateformes partenaires Ces données sont collectées lorsque l’utilisateur effectue l’une des opérations suivantes sur le site :
+
+    chargement des différentes pages et modules,         
+    visites des liens internes et externes,  
+    utilisation des différents services proposés par le site.
+
+Le responsable du traitement conservera dans ses systèmes informatiques du site et dans des conditions raisonnables de sécurité l’ensemble des données collectées pour une durée de : 1 mois. La collecte et le traitement des données répondent aux finalités suivantes :
+
+Les données sont collectées exclusivement dans le cadre du bon fonctionnement du site internet et des services proposés. La collecte assure une expérience optimale dans l’utilisation des outils et le traitement des demandes. Elle nous permet enfin de vous garantir la meilleure expérience utilisateur possible.
+Transmission des données à des tiers :
+
+Les données peuvent être transmises au(x) tiers ci-après énuméré(s) :
+
+Dans le cadre du fonctionnement du site, nous faisons appel à certain nombre de services externes dont Google et Facebook.
+Hébergement des données :
+
+Le site Garage des Lys est hébergé par : OVH, dont le siège est situé à l’adresse ci-après :
+
+    2 rue Kellermann, 59100 Roubaix, France
+    L’hébergeur peut être contacté au numéro de téléphone suivant : 1007
+    Les données collectées et traitées par le site sont exclusivement hébergées et traitées en France.
+
+    &lt;h1&gt; Article 4&lt;/h1&gt;
+&lt;p&gt;responsable du traitement des données et délégué à la protection des données
+Le responsable du traitement des données :
+
+Le responsable du traitement des données à caractère personnel est : M BREVILLE Christophe. Il peut être contacté de la manière suivante : contact@garagedeslys.com. Le responsable du traitement des données est chargé de déterminer les finalités et les moyens mis au service du traitement des données à caractère personnel
+Obligations du responsable du traitement des données :
+
+Le responsable du traitement s’engage à protéger les données à caractère personnel collectées, à ne pas les transmettre à des tiers sans que l’utilisateur n’en ait été informé et à respecter les finalités pour lesquelles ces données ont été collectées. Le site dispose d’un certificat SSL afin de garantir que les informations et le transfert des données transitant par le site sont sécurisés. Un certificat SSL (« Secure Socket Layer » Certificate) a pour but de sécuriser les données échangées entre l’utilisateur et le site. De plus, le responsable du traitement des données s’engage à notifier l’utilisateur en cas de rectification ou de suppression des données, à moins que cela n’entraîne pour lui des formalités, coûts et démarches disproportionnés. Dans le cas où l’intégrité, la confidentialité ou la sécurité des données à caractère personnel de l’utilisateur est compromise, le responsable du traitement s’engage à informer l’utilisateur par tout moyen
+Le délégué à la protection des données :
+
+Par ailleurs, l’utilisateur est informé que la personne suivante a été nommée Délégué à la Protection des Données : M BREVILLE Christophe. Le rôle du Délégué à la Protection des Données et de s’assurer la bonne mise en œuvre des dispositions nationales et supranationales relatives à la collecte et au traitement des données à caractère personnel. Il est parfois appelé DPO (pour Data Protection Officer). Le délégué à la protection des données peut être joint de la manière suivante : contact@garagedeslys.com
+&lt;/p&gt;
+
+&lt;h1&gt; Article 5&lt;/h1&gt;
+&lt;p&gt;
+droits de l’utilisateur
+
+Conformément à la réglementation concernant le traitement des données à caractère personnel, l’utilisateur possède les droits ci-après énumérés. Afin que le responsable du traitement des données fasse droit à sa demande, l’utilisateur est tenu de lui communiquer : ses prénom et nom ainsi que son adresse e-mail. Le responsable du traitement des données est tenu de répondre à l’utilisateur dans un délai de 30 (trente) jours maximums.
+Présentation des droits de l’utilisateur en matière de collecte et traitement de données :
+
+Droit d’accès, de rectification et droit à l’effacement
+
+L’utilisateur peut prendre connaissance, mettre à jour, modifier ou demander la suppression des données le concernant, en respectant la procédure ci-après énoncée :
+
+L’utilisateur doit envoyer un e-mail au responsable du traitement des données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse e-mail réservée à cet usage.
+
+Droit à la portabilité des données
+
+L’utilisateur a le droit de demander la portabilité de ses données personnelles, détenues par le site, vers un autre site, en se conformant à la procédure ci-après :
+
+L’utilisateur doit faire une demande de portabilité de ses données personnelles auprès du responsable du traitement des données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse e-mail réservée à cet usage.
+
+Droit à la limitation et à l’opposition du traitement des données
+
+L’utilisateur a le droit de demander la limitation ou de s’opposer au traitement de ses données par le site, sans que le site ne puisse refuser, sauf à démontrer l’existence de motifs légitimes et impérieux, pouvant prévaloir sur les intérêts et les droits et libertés de l’utilisateur. Afin de demander la limitation du traitement de ses données ou de formuler une opposition au traitement de ses données, l’utilisateur doit suivre la procédure suivante :
+
+L’utilisateur doit faire une demande de limitation au traitement de ses données personnelles auprès du responsable du traitement des données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse e-mail réservée à cet usage
+
+Droit de ne pas faire l’objet d’une décision fondée exclusivement sur un procédé automatisé
+
+Conformément aux dispositions du règlement 2016/679, l’utilisateur a le droit de ne pas faire l’objet d’une décision fondée exclusivement sur un procédé automatisé si la décision produit des effets juridiques le concernant, ou l’affecte de manière significative de façon similaire
+
+Droit de déterminer le sort des données après la mort
+
+Il est rappelé à l’utilisateur qu’il peut organiser quel doit être le devenir de ses données collectées et traitées s’il décède, conformément à la loi n°2016-1321 du 7 octobre 2016
+
+Droit de saisir l’autorité de contrôle compétente
+
+Dans le cas où le responsable du traitement des données décide de ne pas répondre à la demande de l’utilisateur, et que l’utilisateur souhaite contester cette décision, ou, s’il pense qu’il est porté atteinte à l’un des droits énumérés ci-dessus, il est en droit de saisir la CNIL (Commission Nationale de l’Informatique et des Libertés, https://www.cnil.fr) ou tout juge compétent
+Données personnelles des personnes mineures
+
+Conformément aux dispositions de l’article 8 du règlement européen 2016/679 et à la loi Informatique et Libertés, seuls les mineurs âgés de 15 ans ou plus peuvent consentir au traitement de leurs données personnelles. Si l’utilisateur est un mineur de moins de 15 ans, l’accord d’un représentant légal sera requis afin que des données à caractère personnel puissent être collectées et traitées. L’éditeur du site se réserve le droit de vérifier par tout moyen que l’utilisateur est âgé de plus de 15 ans, ou qu’il aura obtenu l’accord d’un représentant légal avant de naviguer sur le site.
+&lt;/p&gt;
+&lt;h1&gt; Article 6&lt;/h1&gt;
+&lt;p&gt;
+utilisation des fichiers « cookies »
+
+Le site a éventuellement recours aux techniques de « cookies ». Un « cookie » est un fichier de petite taille (moins de 4 ko), stocké par le site sur le disque dur de l’utilisateur, contenant des informations relatives aux habitudes de navigation de l’utilisateur. Ces fichiers lui permettent de traiter des statistiques et des informations sur le trafic, de faciliter la navigation et d’améliorer le service pour le confort de l’utilisateur. Pour l’utilisation de fichiers « cookies » impliquant la sauvegarde et l’analyse de données à caractère personnel, le consentement de l’utilisateur est nécessairement demandé. Ce consentement de l’utilisateur est considéré comme valide pour une durée de 13 (treize) mois maximum. A l’issue de cette période, le site demandera à nouveau l’autorisation de l’utilisateur pour enregistrer des fichiers « cookies » sur son disque dur
+Opposition de l’utilisateur a l’utilisation de fichiers « cookies » par le site
+
+Il est porté à la connaissance de l’utilisateur qu’il peut s’opposer à l’enregistrement de ces fichiers « cookies » en configurant son logiciel de navigation. Pour information, l’utilisateur peut trouver aux adresses suivantes les démarches à suivre afin de configurer son logiciel de navigation pour s’opposer à l’enregistrement des fichiers « cookies » :
+
+    Chrome : https://support.google.com/accounts/answer/61416?hl&#x3D;fr 
+    Firefox : https://support.mozilla.org/fr/kb/enable-and-disable-cookies-website-preferences 
+    Safari : http://www.apple.com/legal/privacy/fr-ww/ 
+    Internet Explorer : https://support.microsoft.com/fr-fr/help/17442/windows-internet-explorer-delete-manage-cookies 
+    Opera : http://www.opera.com/help/tutorials/security/cookies/ 
+
+Dans le cas où l’utilisateur décide de désactiver les fichiers « cookies », il pourra poursuivre sa navigation sur le site. Toutefois, tout dysfonctionnement du site provoqué par cette manipulation ne pourrait être considéré comme étant du fait de l’éditeur du site
+Description des fichiers « cookies » utilises par le site
+
+L’éditeur du site attire l’attention de l’utilisateur sur le fait que les cookies suivants sont utilisés lors de sa navigation :
+
+SERVERID87219&#x3D;272021|XHZaj|XHZaP
+&lt;/p&gt;
+&lt;h1&gt; Article 7&lt;/h1&gt;
+&lt;p&gt;
+conditions de modification de la politique de confidentialité
+
+La présente politique de confidentialité peut être consultée à tout moment à l’adresse ci-après indiquée : www.garagedeslys.com/politique-de-confidentialite
+
+L’éditeur du site se réserve le droit de la modifier afin de garantir sa conformité avec le droit en vigueur. Par conséquent, l’utilisateur est invité à venir consulter régulièrement cette politique de confidentialité afin de se tenir informé des derniers changements qui lui seront apportés. Il est porté à la connaissance de l’utilisateur que la dernière mise à jour de la présente politique de confidentialité est intervenue le : 20/11/2019.
+
+&lt;/p&gt;
+&lt;h1&gt; Article 8&lt;/h1&gt;
+&lt;p&gt;
+acceptation par l’utilisateur de la politique de confidentialité
+
+En naviguant sur le site, l’utilisateur atteste avoir lu et compris la présente politique de confidentialité et en accepte les conditions, en ce qui concerne plus particulièrement la collecte et le traitement de ses données à caractère personnel, ainsi que l’utilisation de fichiers « cookies ».
+&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./privacy.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1> Article 1</h1><p>Cette politique de confidentialité s’applique au site : Garage des Lys. La présente politique de confidentialité a pour but d’exposer aux utilisateurs du site :    La manière dont sont collectées et traitées leurs données à caractère personnel. Doivent être considérées comme données personnelles toutes les données étant susceptibles d’identifier un utilisateur. Il s’agit notamment du prénom et du nom, de l’âge, de l’adresse postale, l’adresse mail, la localisation de l’utilisateur ou encore son adresse IP ;     Quels sont les droits des utilisateurs concernant ces données ;     Qui est responsable du traitement des données à caractère personnel collectées et traitées ;     A qui ces données sont transmises ;     Éventuellement, la politique du site en matière de fichiers « cookies ». Cette politique de confidentialité complète les mentions légales.</p><h1> Article 2</h1><p>principes généraux en matière de collecte et de traitement de donnéesConformément aux dispositions de l’article 5 du Règlement européen 2016/679, la collecte et le traitement des données des utilisateurs du site respectent les principes suivants :    Licéité, loyauté et transparence : les données ne peuvent être collectées et traitées qu’avec le consentement de l’utilisateur propriétaire des données. A chaque fois que des données à caractère personnel seront collectées, il sera indiqué à l’utilisateur que ses données sont collectées, et pour quelles raisons ses données sont collectées ;    Finalités limitées : la collecte et le traitement des données sont exécutés pour répondre à un ou plusieurs objectifs déterminés dans les présentes conditions générales d’utilisation ;    Minimisation de la collecte et du traitement des données : seules les données nécessaires à la bonne exécution des objectifs poursuivis par le site sont collectées ;    Conservation des données réduites dans le temps : les données sont conservées pour une durée limitée, dont l’utilisateur est informé. Si la durée de conservation ne peut être communiquée à l’utilisateur ;    Intégrité et confidentialité des données collectées et traitées : le responsable du traitement des données s’engage à garantir l’intégrité et la confidentialité des données collectées.Afin d’être licites, et ce conformément aux exigences de l’article 6 du règlement européen 2016/679, la collecte et le traitement des données à caractère personnel ne pourront intervenir que s’ils respectent au moins l’une des conditions ci-après énumérées :    L’utilisateur a expressément consenti au traitement ;    Le traitement est nécessaire à la bonne exécution d’un contrat ;    Le traitement répond à une obligation légale ;    Le traitement s’explique par une nécessité liée à la sauvegarde des intérêts vitaux de la personne concernée ou d’une autre personne physique ;    Le traitement peut s’expliquer par une nécessité liée à l’exécution d’une mission d’intérêt public ou qui relève de l’exercice de l’autorité publique ;    Le traitement et la collecte des données à caractère personnel sont nécessaires aux fins des intérêts légitimes et privés poursuivis par le responsable du traitement ou par un tiers. </p>    <h1> Article 3</h1>données à caractère personnel collectées et traitées dans le cadre de la navigationDonnées collectées et traitées et mode de collecte :Les données à caractère personnel collectées sur le site Garage des Lys sont les suivantes :Toutes données utiles dans le cadre du bon fonctionnement du site internet, des services proposés et des plateformes partenaires Ces données sont collectées lorsque l’utilisateur effectue l’une des opérations suivantes sur le site :    chargement des différentes pages et modules,             visites des liens internes et externes,      utilisation des différents services proposés par le site.Le responsable du traitement conservera dans ses systèmes informatiques du site et dans des conditions raisonnables de sécurité l’ensemble des données collectées pour une durée de : 1 mois. La collecte et le traitement des données répondent aux finalités suivantes :Les données sont collectées exclusivement dans le cadre du bon fonctionnement du site internet et des services proposés. La collecte assure une expérience optimale dans l’utilisation des outils et le traitement des demandes. Elle nous permet enfin de vous garantir la meilleure expérience utilisateur possible.Transmission des données à des tiers :Les données peuvent être transmises au(x) tiers ci-après énuméré(s) :Dans le cadre du fonctionnement du site, nous faisons appel à certain nombre de services externes dont Google et Facebook.Hébergement des données :Le site Garage des Lys est hébergé par : OVH, dont le siège est situé à l’adresse ci-après :    2 rue Kellermann, 59100 Roubaix, France    L’hébergeur peut être contacté au numéro de téléphone suivant : 1007    Les données collectées et traitées par le site sont exclusivement hébergées et traitées en France.    <h1> Article 4</h1><p>responsable du traitement des données et délégué à la protection des donnéesLe responsable du traitement des données :Le responsable du traitement des données à caractère personnel est : M BREVILLE Christophe. Il peut être contacté de la manière suivante : contact@garagedeslys.com. Le responsable du traitement des données est chargé de déterminer les finalités et les moyens mis au service du traitement des données à caractère personnelObligations du responsable du traitement des données :Le responsable du traitement s’engage à protéger les données à caractère personnel collectées, à ne pas les transmettre à des tiers sans que l’utilisateur n’en ait été informé et à respecter les finalités pour lesquelles ces données ont été collectées. Le site dispose d’un certificat SSL afin de garantir que les informations et le transfert des données transitant par le site sont sécurisés. Un certificat SSL (« Secure Socket Layer » Certificate) a pour but de sécuriser les données échangées entre l’utilisateur et le site. De plus, le responsable du traitement des données s’engage à notifier l’utilisateur en cas de rectification ou de suppression des données, à moins que cela n’entraîne pour lui des formalités, coûts et démarches disproportionnés. Dans le cas où l’intégrité, la confidentialité ou la sécurité des données à caractère personnel de l’utilisateur est compromise, le responsable du traitement s’engage à informer l’utilisateur par tout moyenLe délégué à la protection des données :Par ailleurs, l’utilisateur est informé que la personne suivante a été nommée Délégué à la Protection des Données : M BREVILLE Christophe. Le rôle du Délégué à la Protection des Données et de s’assurer la bonne mise en œuvre des dispositions nationales et supranationales relatives à la collecte et au traitement des données à caractère personnel. Il est parfois appelé DPO (pour Data Protection Officer). Le délégué à la protection des données peut être joint de la manière suivante : contact@garagedeslys.com</p><h1> Article 5</h1><p>droits de l’utilisateurConformément à la réglementation concernant le traitement des données à caractère personnel, l’utilisateur possède les droits ci-après énumérés. Afin que le responsable du traitement des données fasse droit à sa demande, l’utilisateur est tenu de lui communiquer : ses prénom et nom ainsi que son adresse e-mail. Le responsable du traitement des données est tenu de répondre à l’utilisateur dans un délai de 30 (trente) jours maximums.Présentation des droits de l’utilisateur en matière de collecte et traitement de données :Droit d’accès, de rectification et droit à l’effacementL’utilisateur peut prendre connaissance, mettre à jour, modifier ou demander la suppression des données le concernant, en respectant la procédure ci-après énoncée :L’utilisateur doit envoyer un e-mail au responsable du traitement des données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse e-mail réservée à cet usage.Droit à la portabilité des donnéesL’utilisateur a le droit de demander la portabilité de ses données personnelles, détenues par le site, vers un autre site, en se conformant à la procédure ci-après :L’utilisateur doit faire une demande de portabilité de ses données personnelles auprès du responsable du traitement des données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse e-mail réservée à cet usage.Droit à la limitation et à l’opposition du traitement des donnéesL’utilisateur a le droit de demander la limitation ou de s’opposer au traitement de ses données par le site, sans que le site ne puisse refuser, sauf à démontrer l’existence de motifs légitimes et impérieux, pouvant prévaloir sur les intérêts et les droits et libertés de l’utilisateur. Afin de demander la limitation du traitement de ses données ou de formuler une opposition au traitement de ses données, l’utilisateur doit suivre la procédure suivante :L’utilisateur doit faire une demande de limitation au traitement de ses données personnelles auprès du responsable du traitement des données personnelles, en précisant l’objet de sa demande et en utilisant l’adresse e-mail réservée à cet usageDroit de ne pas faire l’objet d’une décision fondée exclusivement sur un procédé automatiséConformément aux dispositions du règlement 2016/679, l’utilisateur a le droit de ne pas faire l’objet d’une décision fondée exclusivement sur un procédé automatisé si la décision produit des effets juridiques le concernant, ou l’affecte de manière significative de façon similaireDroit de déterminer le sort des données après la mortIl est rappelé à l’utilisateur qu’il peut organiser quel doit être le devenir de ses données collectées et traitées s’il décède, conformément à la loi n°2016-1321 du 7 octobre 2016Droit de saisir l’autorité de contrôle compétenteDans le cas où le responsable du traitement des données décide de ne pas répondre à la demande de l’utilisateur, et que l’utilisateur souhaite contester cette décision, ou, s’il pense qu’il est porté atteinte à l’un des droits énumérés ci-dessus, il est en droit de saisir la CNIL (Commission Nationale de l’Informatique et des Libertés, https://www.cnil.fr) ou tout juge compétentDonnées personnelles des personnes mineuresConformément aux dispositions de l’article 8 du règlement européen 2016/679 et à la loi Informatique et Libertés, seuls les mineurs âgés de 15 ans ou plus peuvent consentir au traitement de leurs données personnelles. Si l’utilisateur est un mineur de moins de 15 ans, l’accord d’un représentant légal sera requis afin que des données à caractère personnel puissent être collectées et traitées. L’éditeur du site se réserve le droit de vérifier par tout moyen que l’utilisateur est âgé de plus de 15 ans, ou qu’il aura obtenu l’accord d’un représentant légal avant de naviguer sur le site.</p><h1> Article 6</h1><p>utilisation des fichiers « cookies »Le site a éventuellement recours aux techniques de « cookies ». Un « cookie » est un fichier de petite taille (moins de 4 ko), stocké par le site sur le disque dur de l’utilisateur, contenant des informations relatives aux habitudes de navigation de l’utilisateur. Ces fichiers lui permettent de traiter des statistiques et des informations sur le trafic, de faciliter la navigation et d’améliorer le service pour le confort de l’utilisateur. Pour l’utilisation de fichiers « cookies » impliquant la sauvegarde et l’analyse de données à caractère personnel, le consentement de l’utilisateur est nécessairement demandé. Ce consentement de l’utilisateur est considéré comme valide pour une durée de 13 (treize) mois maximum. A l’issue de cette période, le site demandera à nouveau l’autorisation de l’utilisateur pour enregistrer des fichiers « cookies » sur son disque durOpposition de l’utilisateur a l’utilisation de fichiers « cookies » par le siteIl est porté à la connaissance de l’utilisateur qu’il peut s’opposer à l’enregistrement de ces fichiers « cookies » en configurant son logiciel de navigation. Pour information, l’utilisateur peut trouver aux adresses suivantes les démarches à suivre afin de configurer son logiciel de navigation pour s’opposer à l’enregistrement des fichiers « cookies » :    Chrome : https://support.google.com/accounts/answer/61416?hl=fr     Firefox : https://support.mozilla.org/fr/kb/enable-and-disable-cookies-website-preferences     Safari : http://www.apple.com/legal/privacy/fr-ww/     Internet Explorer : https://support.microsoft.com/fr-fr/help/17442/windows-internet-explorer-delete-manage-cookies     Opera : http://www.opera.com/help/tutorials/security/cookies/ Dans le cas où l’utilisateur décide de désactiver les fichiers « cookies », il pourra poursuivre sa navigation sur le site. Toutefois, tout dysfonctionnement du site provoqué par cette manipulation ne pourrait être considéré comme étant du fait de l’éditeur du siteDescription des fichiers « cookies » utilises par le siteL’éditeur du site attire l’attention de l’utilisateur sur le fait que les cookies suivants sont utilisés lors de sa navigation :SERVERID87219=272021|XHZaj|XHZaP</p><h1> Article 7</h1><p>conditions de modification de la politique de confidentialitéLa présente politique de confidentialité peut être consultée à tout moment à l’adresse ci-après indiquée : www.garagedeslys.com/politique-de-confidentialiteL’éditeur du site se réserve le droit de la modifier afin de garantir sa conformité avec le droit en vigueur. Par conséquent, l’utilisateur est invité à venir consulter régulièrement cette politique de confidentialité afin de se tenir informé des derniers changements qui lui seront apportés. Il est porté à la connaissance de l’utilisateur que la dernière mise à jour de la présente politique de confidentialité est intervenue le : 20/11/2019.</p><h1> Article 8</h1><p>acceptation par l’utilisateur de la politique de confidentialitéEn naviguant sur le site, l’utilisateur atteste avoir lu et compris la présente politique de confidentialité et en accepte les conditions, en ce qui concerne plus particulièrement la collecte et le traitement de ses données à caractère personnel, ainsi que l’utilisation de fichiers « cookies ».</p></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AddcarComponent', 'selector': 'app-addcar'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AulayoutComponent', 'selector': 'app-aulayout'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeletecarComponent', 'selector': 'app-deletecar'},{'name': 'EquipeComponent', 'selector': 'app-equipe'},{'name': 'EtatComponent', 'selector': 'app-etat'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LougoutComponent', 'selector': 'app-lougout'},{'name': 'PaiementComponent', 'selector': 'app-paiement'},{'name': 'PfooterComponent', 'selector': 'app-pfooter'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'PrivacyComponent', 'selector': 'app-privacy'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'ReservationComponent', 'selector': 'app-reservation'},{'name': 'ServiceComponent', 'selector': 'app-service'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'},{'name': 'SignoutComponent', 'selector': 'app-signout'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'TermeComponent', 'selector': 'app-terme'},{'name': 'UpdatecarComponent', 'selector': 'app-updatecar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PrivacyComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PrivacyComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

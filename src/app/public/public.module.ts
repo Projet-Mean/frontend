@@ -35,6 +35,7 @@ import { TermeComponent } from './terme/terme.component';
     CommonModule,
     PublicRoutingModule
 
-  ]
+  ],
+  
 })
 export class PublicModule { }

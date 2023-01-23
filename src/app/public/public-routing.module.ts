@@ -1,3 +1,5 @@
+import { TermeComponent } from './terme/terme.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { PlayoutComponent } from './playout/playout.component';
@@ -17,7 +19,11 @@ const routes:Routes=[
   {path :'about-us', component : AboutUsComponent},
   {path :'reservation', component :ReservationComponent},
   {path :'equipe', component : EquipeComponent},
-  {path :'service', component : ServiceComponent}
+  {path :'service', component : ServiceComponent},
+  {path :'privacy', component : PrivacyComponent},
+  {path :'terme-condition', component : TermeComponent }
+
+  
   ]}
   
   

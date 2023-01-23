@@ -10,6 +10,8 @@ import { PheaderComponent } from './pheader/pheader.component';
 import { PfooterComponent } from './pfooter/pfooter.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { EquipeComponent } from './equipe/equipe.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermeComponent } from './terme/terme.component';
 
 
 
@@ -25,6 +27,8 @@ import { EquipeComponent } from './equipe/equipe.component';
     PfooterComponent,
     ReservationComponent,
     EquipeComponent,
+    PrivacyComponent,
+    TermeComponent,
   
   ],
   imports: [

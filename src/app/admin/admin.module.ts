@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+import { AdminRoutingModule } from './admin-routing.module';
+import { VoitureModule } from './voiture/voiture.module';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AlayoutComponent } from './alayout/alayout.component';
@@ -7,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { EtatComponent } from './etat/etat.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { LougoutComponent } from './lougout/lougout.component';
+import { SignoutComponent } from './signout/signout.component';
 
 
 
@@ -18,10 +21,14 @@ import { LougoutComponent } from './lougout/lougout.component';
         ProfileComponent,
         EtatComponent,
         SidemenuComponent,
-        LougoutComponent
+        LougoutComponent,
+        SignoutComponent,
+      
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AdminRoutingModule
   ]
+
 })
 export class AdminModule { }

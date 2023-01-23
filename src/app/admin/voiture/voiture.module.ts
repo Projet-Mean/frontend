@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AddcarComponent } from './addcar/addcar.component';
 import { UpdatecarComponent } from './updatecar/updatecar.component';
 import { DeletecarComponent } from './deletecar/deletecar.component';
-import { SidemenuComponent } from './sidemenu/sidemenu.component';
+
 
 
 
@@ -12,7 +12,7 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
     AddcarComponent,
     UpdatecarComponent,
     DeletecarComponent,
-    SidemenuComponent
+   
   ],
   imports: [
     CommonModule

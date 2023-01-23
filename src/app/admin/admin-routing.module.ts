@@ -1,6 +1,6 @@
 import { LougoutComponent } from './lougout/lougout.component';
 import { EtatComponent } from './etat/etat.component';
-import { VoitureModule } from './voiture/voiture.module';
+
 import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AlayoutComponent } from './alayout/alayout.component';
@@ -10,11 +10,19 @@ import { RouterModule,Routes } from "@angular/router";
 
 
 const routes:Routes=[
-  {path:'/admin', component: AlayoutComponent, children :[
+  {path:'', component: AlayoutComponent, children :[
     {path:'' ,redirectTo:'dashboard', pathMatch:'full'},
   { path:'dashboard', component : DashboardComponent },
   {path :'profil', component : ProfileComponent},
-  {path :'voiture', component : VoitureModule},
+  {
+    path :'voiture',loadChildren:()=> import("./voiture/voiture.module")
+.then(m=>m.VoitureModule) 
+}, 
+{
+  path :'facture', loadChildren:()=> import("./facture/facture.module")
+.then(m=>m.FactureModule)
+},
+
   {path :'etat', component :EtatComponent},
   {path :'logout', component : LougoutComponent},
  

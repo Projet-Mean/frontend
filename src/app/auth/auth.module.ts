@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+
+import { FormsModule } from '@angular/forms';
 import { AulayoutComponent } from './aulayout/aulayout.component';
 
 
@@ -11,11 +13,13 @@ import { AulayoutComponent } from './aulayout/aulayout.component';
   declarations: [
     LoginComponent,
     SignupComponent,
-    AulayoutComponent
+    AulayoutComponent,
+   
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    FormsModule
   ]
 })
 export class AuthModule { }

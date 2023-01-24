@@ -400,7 +400,9 @@
             padding: 30px 10px;
         }
     }
-    
+    .form-error{
+        color:red;
+    }
     </style>
     
     
@@ -429,13 +431,19 @@
                       <div class="login-inner-form">
                           <div class="details">
                               <h3>Login to <span>your account</span></h3>
-                              <form action="http://uiwebsoft.com/justlog/index.html" method="GET">
+                              <form action="http://uiwebsoft.com/justlog/index.html" name ="form" #f="ngForm" (ngSubmit)="f.form.valid && OnSubmit()" method="GET">
+                                  <div class="form-group" >
+                                      <input type="email" [(ngModel)]="form.email" #email="ngModel"name="email" class="input-text" placeholder="Email Address" required>
+                                <div class="form-error" *ngIf="email.errors && f.submitted">
+                                        Email is required!
+                                </div>
+                                    </div>
+                                 
                                   <div class="form-group">
-                                      <input type="email" name="email" class="input-text" placeholder="Email Address">
-                                  </div>
-                                  <div class="form-group">
-                                      <input type="password" name="Password" class="input-text" placeholder="Password">
-                                  </div>
+                                      <input type="password" name="Password" [(ngModel)]="form.password" #password="ngModel"class="input-text" placeholder="Password" required>
+                                    <div class="form-error" *ngIf="password.errors && f.submitted">
+                                        Password is required!
+                                </div>                                   </div>
                                   <div class="checkbox clearfix">
                                       <div class="form-check checkbox-theme">
                                           <input class="form-check-input" type="checkbox" value="" id="rememberMe">

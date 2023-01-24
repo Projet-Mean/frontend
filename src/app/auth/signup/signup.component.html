@@ -468,15 +468,22 @@
                       <div class="login-inner-form">
                           <div class="details">
                               <h3>Create <span>your account</span></h3>
-                              <form action="http://uiwebsoft.com/justlog/index.html" method="GET">
+                              <form action="http://uiwebsoft.com/justlog/index.html" name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()"  method="GET" >
                                 <div class="form-group">
-                                      <input type="text" name="FullName" class="input-text" placeholder="Full Name">
-                                  </div>
+                                      <input type="text" [(ngModel)]="form.name" #name="ngModel" name="FullName" class="input-text" placeholder="Full Name" required>
+                                 
+                                    </div>
                                   <div class="form-group">
-                                      <input type="password" name="Password" class="input-text" placeholder="Password">
-                                  </div>
+                                      <input type="password" [(ngModel)]="form.password" #password="ngModel" name="Password" class="input-text" placeholder="Password" required minlength="6">
+                                      <div class="form-error" *ngIf="password.errors && f.submitted">
+                                        Password is required!
+                                </div> 
+                                <!-- <div class="form-error" *ngIf="password.errors['minlength'] ">
+                                    Password is must be at least 6 caracters
+                            </div>  -->
+                                    </div>
                                   <div class="form-group">
-                                      <input type="email" name="email" class="input-text" placeholder="Email Address">
+                                      <input type="email" [(ngModel)]="form.email" #email="ngModel" name="email" class="input-text" placeholder="Email Address">
                                   </div>
                                   <div class="checkbox clearfix">
                                       <div class="form-check checkbox-input">

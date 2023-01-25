@@ -1,3 +1,4 @@
+import { SignoutComponent } from './signout/signout.component';
 import { LougoutComponent } from './lougout/lougout.component';
 import { EtatComponent } from './etat/etat.component';
 
@@ -24,7 +25,7 @@ const routes:Routes=[
 },
 
   {path :'etat', component :EtatComponent},
-  {path :'logout', component : LougoutComponent},
+  {path :'signout', component : SignoutComponent},
  
   ]}
 ];

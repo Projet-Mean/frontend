@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
   form={
-    name:null,
+    nom:null,
+    prenom:null,
+    civilite:null,
+    adresse:null,
+    telephone:null,
+    email:null,
     password:null,
-    email:null
+    passwordconfirmation:null
+    
   }
   constructor(){}
  

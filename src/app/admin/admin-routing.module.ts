@@ -1,6 +1,7 @@
 import { SignoutComponent } from './signout/signout.component';
 import { LougoutComponent } from './lougout/lougout.component';
 import { EtatComponent } from './etat/etat.component';
+import { DeletecarComponent } from './voiture/deletecar/deletecar.component';
 
 import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -11,14 +12,11 @@ import { RouterModule,Routes } from "@angular/router";
 
 
 const routes:Routes=[
-  {path:'', component: AlayoutComponent, children :[
-    {path:'' ,redirectTo:'dashboard', pathMatch:'full'},
+  { path:'', component: AlayoutComponent, children :[
+  { path:'' ,redirectTo:'dashboard', pathMatch:'full'},
   { path:'dashboard', component : DashboardComponent },
-  {path :'profil', component : ProfileComponent},
-  {
-    path :'voiture',loadChildren:()=> import("./voiture/voiture.module")
-.then(m=>m.VoitureModule) 
-}, 
+  { path :'profil', component : ProfileComponent},
+  { path :'voiture',component : DeletecarComponent},
 {
   path :'facture', loadChildren:()=> import("./facture/facture.module")
 .then(m=>m.FactureModule)
@@ -26,7 +24,7 @@ const routes:Routes=[
 
   {path :'etat', component :EtatComponent},
   {path :'signout', component : SignoutComponent},
- 
+
   ]}
 ];
   @NgModule({

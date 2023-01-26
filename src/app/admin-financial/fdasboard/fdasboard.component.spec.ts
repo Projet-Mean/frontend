@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BeneficeComponent } from './benefice.component';
+import { FdasboardComponent } from './fdasboard.component';
 
-describe('BeneficeComponent', () => {
-  let component: BeneficeComponent;
-  let fixture: ComponentFixture<BeneficeComponent>;
+describe('FdasboardComponent', () => {
+  let component: FdasboardComponent;
+  let fixture: ComponentFixture<FdasboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BeneficeComponent ]
+      declarations: [ FdasboardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BeneficeComponent);
+    fixture = TestBed.createComponent(FdasboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

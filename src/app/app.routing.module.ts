@@ -17,6 +17,10 @@ const routes:Routes=[
     .then(m=>m.AdminWorkshopModule)
   },
   {
+    path:'finance', loadChildren:()=> import('./admin-financial/admin-financial.module')
+    .then(m=>m.AdminFinancialModule)
+  },
+  {
     path:'auth', loadChildren:()=> import("./auth/auth.module")
     .then(m=>m.AuthModule)
   }

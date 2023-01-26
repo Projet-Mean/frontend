@@ -21131,7 +21131,7 @@ dl li {
 /*# sourceMappingURL=maps/style.css.map */
 
 </style>
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas" id="sidebar" style="height: 100%">
   <a href="index.html" class="navbar-brand mx-4 mb-3">
     <img src="../../../assets/logoB.png" height="100px">
   </a>
@@ -21152,16 +21152,20 @@ dl li {
         <div class="badge badge-info badge-pill">2</div>
       </a></li>
       <li class="nav-item"><a [routerLink]="['profil']" class="nav-item nav-link "><i class="fa-solid fa-user"></i>   Profile</a></li>
-      <div class="nav-item dropdown">
-        <li class="nav-item"><a [routerLink]="['Voiture/addcar']" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Voiture</a></li>
-      <div class="dropdown-menu bg-transparent border-0">
-        <ul class="nav">
-          <li class="nav-item"><a [routerLink]="['Voiture/addcar']" class="dropdown-item">Ajouter une voiture</a></li>
-          <li class="nav-item"><a [routerLink]="['Voiture/update']" class="dropdown-item">Modifier une voiture</a></li>
-          <li class="nav-item"><a [routerLink]="['Voiture/deletecar']" class="dropdown-item">Supprimer une voiture</a></li>
-        </ul>
-      </div>
-      </div>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="./admin/Voiture/addcar" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-account menu-icon"></i>
+          <span class="menu-title">Voiture</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="auth">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="['Voiture/addcar']"> Ajouter une voiture </a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="['Voiture/update']"> Modifier une voiture </a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="['Voiture/deletecar']"> Supprimer une voiture </a></li>
+          </ul>
+        </div>
+      </li>
 
       <li class="nav-item"><a [routerLink]="['etat']" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Voir l'etat d'avancement</a></li>
       <li class="nav-item"><a [routerLink]="['facture']" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>Facture</a></li>
@@ -21169,3 +21173,17 @@ dl li {
     </ul>
   </div>
 </nav>
+<script src="./assets/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="./assets/vendors/chart.js/Chart.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="./assets/js/off-canvas.js"></script>
+  <script src="./assets/js/hoverable-collapse.js"></script>
+  <script src="./assets/js/template.js"></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="./assets/js/dashboard.js"></script>

@@ -14,6 +14,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { FsidemenuComponent } from './fsidemenu/fsidemenu.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
 
+import { NgChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
@@ -33,7 +35,11 @@ import { FfooterComponent } from './ffooter/ffooter.component';
   ],
   imports: [
     CommonModule,
-  AdminWorkshopRoutingModule
+    AdminWorkshopRoutingModule,
+    NgChartsModule
   ]
 })
-export class AdminWorkshopModule { }
+export class AdminWorkshopModule {
+  title = 'ng2-charts-demo';
+
+}

@@ -1,6 +1,6 @@
-import { SignoutComponent } from './../admin/signout/signout.component';
+import { SignoutComponent } from './signout/signout.component';
 import { SortieComponent } from './sortie/sortie.component';
-import { EtatComponent } from './../admin/etat/etat.component';
+import { EtatComponent } from './etat/etat.component';
 import { AjoutVoitureComponent } from './ajout-voiture/ajout-voiture.component';
 import { ReceptionComponent } from './reception/reception.component';
 import { ReparationComponent } from './reparation/reparation.component';
@@ -28,9 +28,9 @@ const routes:Routes=[
 
 ]}]
   @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forChild(routes)],
     exports:[RouterModule]
   })
-export class AdminWorkshopRoutingModule
-  {
+export class AdminWorkshopRoutingModule{
+
   }

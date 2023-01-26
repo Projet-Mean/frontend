@@ -21131,7 +21131,7 @@ dl li {
 /*# sourceMappingURL=maps/style.css.map */
 
 </style>
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas" id="sidebar" style="height: 100%">
   <a href="index.html" class="navbar-brand mx-4 mb-3">
     <img src="../../../assets/logoB.png" height="100px">
   </a>
@@ -21151,25 +21151,11 @@ dl li {
         <span class="menu-title">Dashboard</span>
         <div class="badge badge-info badge-pill">2</div>
       </a></li>
-      <li class="nav-item"><a [routerLink]="['profil']" class="nav-item nav-link "><i class="fa-solid fa-user"></i>   Profile</a></li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="./admin/Voiture/addcar" aria-expanded="false" aria-controls="auth">
-          <i class="mdi mdi-account menu-icon"></i>
-          <span class="menu-title">Voiture</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="auth">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" [routerLink]="['Voiture/addcar']"> Ajouter une voiture </a></li>
-            <li class="nav-item"> <a class="nav-link" [routerLink]="['Voiture/update']"> Modifier une voiture </a></li>
-            <li class="nav-item"> <a class="nav-link" [routerLink]="['Voiture/deletecar']"> Supprimer une voiture </a></li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="nav-item"><a [routerLink]="['etat']" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Voir l'etat d'avancement</a></li>
-      <li class="nav-item"><a [routerLink]="['facture']" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>Facture</a></li>
-      <li class="nav-item"><a [routerLink]="['signout']" class="nav-item nav-link"><i class="fa-duotone fa-arrow-right-from-bracket"></i>Sign-out</a></li>
+      <li class="nav-item"><a [routerLink]="['profil']" class="nav-item nav-link"><i class="mdi mdi-account menu-icon"></i><span class="menu-title"> Mon profil</span></a></li>
+      <li class="nav-item"><a [routerLink]="['reception']" class="nav-item nav-link "><i class="  mdi mdi-format-list-bulleted-type  "></i><span class="menu-title">    Voiture en attente</span></a></li>
+      <li class="nav-item"><a [routerLink]="['etat']" class="nav-item nav-link"><i class=" mdi mdi-view-grid "></i><span class="menu-title">    Mes Réparations</span></a></li>
+      <li class="nav-item"><a [routerLink]="['sortie']" class="nav-item nav-link"><i class="  mdi mdi-check-decagram   "></i><span class="menu-title">    Sortie Voiture</span></a></li>
+      <li class="nav-item"><a [routerLink]="['signout']" class="nav-item nav-link"><i class="mdi mdi-forward"></i><span class="menu-title">    Sign-out</span></a></li>
     </ul>
   </div>
 </nav>

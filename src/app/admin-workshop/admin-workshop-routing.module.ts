@@ -3,15 +3,9 @@ import { SortieComponent } from './sortie/sortie.component';
 import { EtatComponent } from './etat/etat.component';
 import { AjoutVoitureComponent } from './ajout-voiture/ajout-voiture.component';
 import { ReceptionComponent } from './reception/reception.component';
-<<<<<<< HEAD
-import { ReparationComponent } from 'reparation/reparation.component';
-import { ClientComponent } from './client/client.component';
-import {ProfileComponent} from 'profile/profile.component';
-=======
 import { ReparationComponent } from './reparation/reparation.component';
 import { ClientComponent } from './client/client.component';
 import { ProfileComponent } from './profile/profile.component';
->>>>>>> 8581f498555b02c471013453e53629d36ef0f903
 import { WdashboardComponent } from './wdashboard/wdashboard.component';
 import { WlayoutComponent } from './wlayout/wlayout.component';
 

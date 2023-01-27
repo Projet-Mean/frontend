@@ -11,19 +11,22 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { LougoutComponent } from './lougout/lougout.component';
 import { SignoutComponent } from './signout/signout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FactureComponent } from './facture/facture.component';
+import { PayementComponent } from './payement/payement.component';
 
 
 
 @NgModule({
   declarations: [
-
     AlayoutComponent,
     DashboardComponent,
     ProfileComponent,
     EtatComponent,
     SidemenuComponent,
     LougoutComponent,
-    SignoutComponent
+    SignoutComponent,
+    FactureComponent,
+    PayementComponent
   ],
   imports: [
     CommonModule,

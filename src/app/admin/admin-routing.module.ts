@@ -9,22 +9,21 @@ import { AlayoutComponent } from './alayout/alayout.component';
 
 import { NgModule } from "@angular/core";
 import { RouterModule,Routes } from "@angular/router";
+import { FactureComponent } from './facture/facture.component';
+
+import { PayementComponent } from './payement/payement.component';
 
 
 const routes:Routes=[
   { path:'', component: AlayoutComponent, children :[
-  { path:'' ,redirectTo:'dashboard', pathMatch:'full'},
-  { path:'dashboard', component : DashboardComponent },
-  { path :'profil', component : ProfileComponent},
-  { path :'voiture',component : DeletecarComponent},
-{
-  path :'facture', loadChildren:()=> import("./facture/facture.module")
-.then(m=>m.FactureModule)
-},
-
-  {path :'etat', component :EtatComponent},
-  {path :'signout', component : SignoutComponent},
-
+    { path:'' ,redirectTo:'dashboard', pathMatch:'full'},
+    { path:'dashboard', component : DashboardComponent },
+    { path :'profil', component : ProfileComponent},
+    { path :'voiture',component : DeletecarComponent},
+    { path :'facture',component : FactureComponent},
+    { path :'facture/paye',component : PayementComponent},
+    {path :'etat', component :EtatComponent},
+    {path :'signout', component : SignoutComponent},
   ]}
 ];
   @NgModule({

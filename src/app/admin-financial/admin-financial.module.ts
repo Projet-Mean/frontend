@@ -9,12 +9,11 @@ import { PersonnelleComponent } from './personnelle/personnelle.component';
 import { DepenseComponent } from './depense/depense.component';
 import { SignoutComponent } from './signout/signout.component';
 import { FdasboardComponent } from './fdasboard/fdasboard.component';
-
+import { PayementComponent } from './payement/payement.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminFinancialRoutingModule } from './admin-financial-routing.module';
 import { NgChartsModule } from 'ng2-charts';
-
-
+import { EntreeComponent } from './entree/entree.component';
 
 
 @NgModule({
@@ -27,7 +26,9 @@ import { NgChartsModule } from 'ng2-charts';
     PersonnelleComponent,
     DepenseComponent,
     SignoutComponent,
-    FdasboardComponent
+    FdasboardComponent,
+    PayementComponent,
+    EntreeComponent
   ],
   imports: [
     CommonModule,

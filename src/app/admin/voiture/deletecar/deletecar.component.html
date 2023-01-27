@@ -21289,96 +21289,104 @@ dl li {
     <div class="main-panel">
       <div class="content-wrapper">
         <div class="row">
+          <div class="col-12 col-xl-6 grid-margin stretch-card">
+            <div class="row w-100 flex-grow">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Garage</h4>
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>
+                              Matricule
+                            </th>
+                            <th>
+                              Progression
+                            </th>
+                            <th>
+                              Action
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of items">
+                            <td class="py-1">
+                              {{ item.name }}
+                            </td>
+                            <td>
+                              <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 grid-margin stretch-card">
+            <div class="row w-100 flex-grow">
+              <div class="col-md-12 stretch-card">
+                <div class="card">
+                  <div class="card-body pb-0">
+                    <p class="card-title">Details</p>
+                    <div *ngIf="selectedItem">
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>
+                                Dégat
+                              </th>
+                              <th>
+                                Etat
+                              </th>
+                              <th>
+                                Coût
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let degat of selectedItem">
+                              <td class="py-1">
+                                {{ degat.name }}
+                              </td>
+                              <td>
+                                {{ degat.etat }}
+                              </td>
+                              <td>
+                                {{ degat.description }}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div style="float:right">
+                        <p>Mecanicien : Mecano</p>
+                        <p>Deadline : 29 JAN 2023</p>
+                        <p>Somme à paryer : 90 000 Ar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <canvas height="170" id="status-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Garage</h4>
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>
-                          Matricule
-                        </th>
-                        <th>
-                          Réparation
-                        </th>
-                        <th>
-                          Progression
-                        </th>
-                        <th>
-                          Deadline
-                        </th>
-                        <th>
-                          Action
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="py-1">
-                          5822TBH
-                        </td>
-                        <td>
-                          Moteur
-                        </td>
-                        <td>
-                          <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </td>
-                        <td>
-                          May 15, 2023
-                        </td>
-                        <td>
-                          <button class="btn btn-success btn-rounded btn-fw">Demander facture</button>
-                          <button class="btn btn-dark btn-rounded btn-fw"> Recupérer</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="py-1">
-                          5822TBH
-                        </td>
-                        <td>
-                          Moteur
-                        </td>
-                        <td>
-                          <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </td>
-                        <td>
-                          May 15, 2023
-                        </td>
-                        <td>
-                          <button class="btn btn-success btn-rounded btn-fw">Demander facture</button>
-                          <button class="btn btn-dark btn-rounded btn-fw"> Recupérer</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="py-1">
-                          5822TBH
-                        </td>
-                        <td>
-                          Moteur
-                        </td>
-                        <td>
-                          <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </td>
-                        <td>
-                          May 15, 2023
-                        </td>
-                        <td>
-                          <button class="btn btn-success btn-rounded btn-fw">Demander facture</button>
-                          <button class="btn btn-dark btn-rounded btn-fw"> Recupérer</button>
-                        </td>
-                      </tr>
 
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </div>
           </div>

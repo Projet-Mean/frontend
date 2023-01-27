@@ -20724,7 +20724,7 @@ dl li {
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
   -ms-transition: background 0.25s ease;
-  background: url(./assets/images/other/portfolio-2.jpg) center center no-repeat;
+  background: url(./assets/images/other/backiee-129076-landscape.jpg) center center no-repeat;
   background-size: cover;
   height: 262px;
   width: auto;
@@ -21289,87 +21289,78 @@ dl li {
     <div class="main-panel">
       <div class="content-wrapper">
         <div class="row">
+          <div class="col-12 col-xl-6 grid-margin stretch-card">
+            <div class="row w-100 flex-grow">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card" style="background-color:black ">
+                  <div class="card-body">
+                    <h4 class="card-title">Nos Clients</h4>
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>
+                              Nom
+                            </th>
+                            <th>
+                              Voiture
+                            </th>
+                            <th>
+                              Action
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of items">
+                            <td class="py-1">
+                              {{ item.name }}
+                            </td>
+                            <td>
+                              {{ item.description }}
+                            </td>
+                            <td>
+                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 grid-margin stretch-card">
+            <div class="row w-100 flex-grow">
+              <div class="col-md-12 stretch-card">
+                <div class="card">
+                  <div class="card-body pb-0">
+                    <div *ngIf="selectedItem">
+                      <p class="card-title">Profil</p>
+                    <hr/>
+                    <div style="width: 50%;float:left">
+                      <label style="min-width :30%">Nom : Andrianjafy</label>
+                      <label style="min-width :30%">Prénom : Baovola Santatra</label>
+                      <label style="min-width :30%">Adresse : de aiza zany le Hoe Fitia?</label>
+                      <label style="min-width :30%">Adresse email : alka@akalj.jah </label>
+                      <label style="min-width :30%">Client depuis : Janvier 2023 </label>
+                      <label style="min-width :30%">Voiture : 1235TBH </label>
+                      <label style="min-width :30%">Marque  : Renault </label>
+                    </div>
+                    <img class="rounded-circle" src="../../../assets/images/users/4.jpg" alt="" style="width: 40%; height: 50%;margin:auto; float:right">
+                    </div>
+                  </div>
+                  <canvas height="170" id="status-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Nos Clients</h4>
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Nom
-                        </th>
-                        <th>
-                          Voiture
-                        </th>
-                        <th>
-                          Réparation restant
-                        </th>
-                        <th>
-                          Action
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="py-1">
-                          <img src="./assets/images/faces/face1.jpg" alt="image"/>
-                        </td>
-                        <td>
-                          Rakoto
-                        </td>
-                        <td>
-                          5822TBH
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          <button class="btn btn-dark btn-rounded btn-fw"> Voir détails</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="py-1">
-                          <img src="./assets/images/faces/face1.jpg" alt="image"/>
-                        </td>
-                        <td>
-                          Rabe
-                        </td>
-                        <td>
-                          1122TBM
-                        </td>
-                        <td>
-                          10
-                        </td>
-                        <td>
-                          <button class="btn btn-dark btn-rounded btn-fw"> Voir détails</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="py-1">
-                          <img src="./assets/images/faces/face1.jpg" alt="image"/>
-                        </td>
-                        <td>
-                          Ratrema
-                        </td>
-                        <td>
-                          4456TAA
-                        </td>
-                        <td>
-                          0
-                        </td>
-                        <td>
-                          <button class="btn btn-dark btn-rounded btn-fw"> Voir détails</button>
-                        </td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-                </div>
+
               </div>
             </div>
           </div>

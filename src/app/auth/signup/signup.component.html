@@ -468,40 +468,79 @@
                       <div class="login-inner-form">
                           <div class="details">
                               <h3>Creer <span>votre compte</span></h3>
-                              <form action="http://uiwebsoft.com/justlog/index.html" name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()"  method="GET" >
+
+                                    <form  (ngSubmit)="onSubmit()">
+                                      <div class="form-group">
+                                        <label>Nom</label>
+                                        <input class="form-control" type="text" formControlName="nom" required>
+                                      </div>
+                               
+                                      <div class="form-group">
+                                        <label>Prenom</label>
+                                        <input class="form-control" type="text" formControlName="prenom" required>
+                                      </div>
+                               
+                                      <div class="form-group">
+                                        <label>Civilite</label>
+                                        <input class="form-control" type="text" formControlName="civilite" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Adresse</label>
+                                        <input class="form-control" type="text" formControlName="adresse" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Telephone</label>
+                                        <input class="form-control" type="text" formControlName="telephone" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>email</label>
+                                        <input class="form-control" type="text" formControlName="email" required>
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Mot de passe</label>
+                                        <input class="form-control" type="text" formControlName="password" required>
+                                      </div>
+                               
+                                      <div class="form-group">
+                                        <label>Confirmer votre mot de passe</label>
+                                        <input class="form-control" type="text" formControlName="passwordconfirmation" required>
+                                      </div>
+                              
+                              <!-- <form action="http://uiwebsoft.com/justlog/index.html"  #f ="ngForm" (ngSubmit)="f.form.valid && onSubmit()"  method="GET" >
                                 <div class="form-group">
-                                      <input type="text" [(ngModel)]="form.nom" #name="ngModel" name="FullName" class="input-text" placeholder="Nom" required>
+                                      <input type="text" [(ngModel)]="form.nom"  #nom = "ngModel" name="nom"  class="input-text"placeholder="Nom" required>
                                    </div>
                                     <div class="form-group">
-                                        <input type="email" [(ngModel)]="form.prenom" #email="ngModel" name="email" class="input-text" placeholder="Prenom">
+                                        <input type="email" [(ngModel)]="form.prenom"  #prenom = "ngModel"name="prenom" class="input-text" placeholder="Prenom" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" [(ngModel)]="form.civilite" #name="ngModel" name="FullName" class="input-text" placeholder="Civilite" required>
+                                        <input type="text" [(ngModel)]="form.civilite" #civilite = "ngModel" name="civilite" class="input-text" placeholder="Civilite" required>
                                      </div>
                                      <div class="form-group">
-                                        <input type="text" [(ngModel)]="form.adresse" #name="ngModel" name="FullName" class="input-text" placeholder="Adresse" required>
+                                        <input type="text" [(ngModel)]="form.adresse"  #adresse = "ngModel"name="adresse" class="input-text" placeholder="Adresse" required>
                                      </div>
                                      <div class="form-group">
-                                        <input type="text" [(ngModel)]="form.telephone" #name="ngModel" name="FullName" class="input-text" placeholder="Telephone" required>
+                                        <input type="text" [(ngModel)]="form.telephone" #telephone = "ngModel" class="input-text" name="telephone"  placeholder="Telephone" required>
                                      </div>
                                     <div class="form-group">
-                                        <input type="email" [(ngModel)]="form.email" #email="ngModel" name="email" class="input-text" placeholder="Adresse email">
+                                        <input type="email" [(ngModel)]="form.email" #email = "ngModel" class="input-text" name="email"   placeholder="Adresse email">
                                     </div>
                                   <div class="form-group">
-                                      <input type="password" [(ngModel)]="form.password" #password="ngModel" name="Password" class="input-text" placeholder="Mot de passe" required minlength="6">
+                                      <input type="password" [(ngModel)]="form.password" #password = "ngModel" class="input-text" name="Password" placeholder="Mot de passe" required minlength="6">
                                       <div class="form-error" *ngIf="password.errors && f.submitted">
                                         Password is required!
                                 </div> 
                                 <!-- <div class="form-error" *ngIf="password.errors['minlength'] ">
                                     Password is must be at least 6 caracters
                             </div>  -->
-                                    </div>
+                                    <!-- </div>
                                     <div class="form-group">
-                                        <input type="password" [(ngModel)]="form.passwordconfirmation" #password="ngModel" name="Password" class="input-text" placeholder="Confirmer votre mot de passe" required minlength="6">
+                                        <input type="password" [(ngModel)]="form.passwordconfirmation" #passwordconfirmation = "ngModel"  name="passwordconfirmation" class="input-text" placeholder="Confirmer votre mot de passe" required minlength="6">
                                         <div class="form-error" *ngIf="password.errors && f.submitted">
                                           Password is required!
                                   </div> 
-                                </div>
+                                </div> -->
+                             -->
                                   
                                   <div class="checkbox clearfix">
                                       <div class="form-check checkbox-input">
@@ -512,7 +551,7 @@
                                       </div>
                                   </div>
                                   <div class="form-group">
-                                      <button type="submit" class="btn-md btn-theme btn-block">Register</button>
+                                      <button type="submit" routerLink="/signup" class="btn-md btn-theme btn-block">Register</button>
                                   </div>
                               </form>
                               <p>Already a member?<a [routerLink]="['login']"> Login here</a></p>

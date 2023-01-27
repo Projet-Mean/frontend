@@ -5,6 +5,8 @@ import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
 
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],

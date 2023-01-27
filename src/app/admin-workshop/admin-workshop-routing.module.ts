@@ -3,9 +3,9 @@ import { SortieComponent } from './sortie/sortie.component';
 import { EtatComponent } from './../admin/etat/etat.component';
 import { AjoutVoitureComponent } from './ajout-voiture/ajout-voiture.component';
 import { ReceptionComponent } from './reception/reception.component';
-import { ReparationComponent } from './../../../../UIBack-end/src/app/reparation/reparation.component';
+import { ReparationComponent } from 'reparation/reparation.component';
 import { ClientComponent } from './client/client.component';
-import { ProfileComponent } from './../../../../UIBack-end/src/app/dash-fi/dashboard-components/profile/profile.component';
+import {ProfileComponent} from 'profile/profile.component';
 import { WdashboardComponent } from './wdashboard/wdashboard.component';
 import { WlayoutComponent } from './wlayout/wlayout.component';
 

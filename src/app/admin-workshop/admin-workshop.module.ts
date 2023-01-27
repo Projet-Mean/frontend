@@ -13,6 +13,8 @@ import { SignoutComponent } from './signout/signout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FsidemenuComponent } from './fsidemenu/fsidemenu.component';
 import { FfooterComponent } from './ffooter/ffooter.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -33,7 +35,13 @@ import { FfooterComponent } from './ffooter/ffooter.component';
   ],
   imports: [
     CommonModule,
-  AdminWorkshopRoutingModule
+    AdminWorkshopRoutingModule,
+    NgChartsModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
-export class AdminWorkshopModule { }
+export class AdminWorkshopModule {
+  title = 'ng2-charts-demo';
+
+}

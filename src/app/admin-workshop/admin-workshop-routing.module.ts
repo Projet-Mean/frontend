@@ -1,11 +1,17 @@
-import { SignoutComponent } from './../admin/signout/signout.component';
+import { SignoutComponent } from './signout/signout.component';
 import { SortieComponent } from './sortie/sortie.component';
-import { EtatComponent } from './../admin/etat/etat.component';
+import { EtatComponent } from './etat/etat.component';
 import { AjoutVoitureComponent } from './ajout-voiture/ajout-voiture.component';
 import { ReceptionComponent } from './reception/reception.component';
+<<<<<<< HEAD
 import { ReparationComponent } from 'reparation/reparation.component';
 import { ClientComponent } from './client/client.component';
 import {ProfileComponent} from 'profile/profile.component';
+=======
+import { ReparationComponent } from './reparation/reparation.component';
+import { ClientComponent } from './client/client.component';
+import { ProfileComponent } from './profile/profile.component';
+>>>>>>> 8581f498555b02c471013453e53629d36ef0f903
 import { WdashboardComponent } from './wdashboard/wdashboard.component';
 import { WlayoutComponent } from './wlayout/wlayout.component';
 
@@ -16,21 +22,21 @@ import { RouterModule,Routes } from "@angular/router";
 const routes:Routes=[
   {path:'', component:WlayoutComponent, children :[
     {path:'' ,redirectTo:'dashboard', pathMatch:'full'},
-  { path:'dashboard', component : WdashboardComponent },
-  {path :'profil', component : ProfileComponent},
-  {path :'client', component : ClientComponent},
-  {path :'reparation', component :ReparationComponent},
-  {path :'reception', component : ReceptionComponent},
-  {path :'add', component : AjoutVoitureComponent},
-  {path :'etat', component : EtatComponent},
-  {path :'sortie', component : SortieComponent },
-  {path :'signout', component : SignoutComponent }
- 
+    { path:'dashboard', component : WdashboardComponent },
+    {path :'profil', component : ProfileComponent},
+    {path :'client', component : ClientComponent},
+    {path :'reparation', component :ReparationComponent},
+    {path :'reception', component : ReceptionComponent},
+    {path :'add', component : AjoutVoitureComponent},
+    {path :'etat', component : EtatComponent},
+    {path :'sortie', component : SortieComponent },
+    {path :'signout', component : SignoutComponent }
+
 ]}]
   @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forChild(routes)],
     exports:[RouterModule]
   })
-export class AdminWorkshopRoutingModule
-  {
+export class AdminWorkshopRoutingModule{
+
   }

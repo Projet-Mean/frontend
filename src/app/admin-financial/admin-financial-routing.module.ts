@@ -1,35 +1,33 @@
 import { FlayoutComponent } from './flayout/flayout.component';
-import { SignoutComponent } from '../admin/signout/signout.component';
-import { SortieComponent } from './sortie/sortie.component';
-import { EtatComponent } from '../admin/etat/etat.component';
-import { AjoutVoitureComponent } from './ajout-voiture/ajout-voiture.component';
-import { ReceptionComponent } from './reception/reception.component';
-import { ReparationComponent } from '../../../../UIBack-end/src/app/reparation/reparation.component';
+import { SignoutComponent } from './signout/signout.component';
 import { ClientComponent } from './client/client.component';
 import { ProfileComponent } from './profile/profile.component'
-import { WdashboardComponent } from './wdashboard/wdashboard.component';
-import { WlayoutComponent } from './wlayout/wlayout.component';
-
+import { FdasboardComponent } from './fdasboard/fdasboard.component';
 import { NgModule } from "@angular/core";
 import { RouterModule,Routes } from "@angular/router";
+import { FactureComponent } from './facture/facture.component';
+import { DepenseComponent } from './depense/depense.component';
+import { PayementComponent } from './payement/payement.component';
+import { PersonnelleComponent } from './personnelle/personnelle.component';
+import { EntreeComponent } from './entree/entree.component';
 
 
 const routes:Routes=[
   {path:'', component:FlayoutComponent, children :[
-    {path:'' ,redirectTo:'fdashboard', pathMatch:'full'},
-  { path:'dashboard', component : WdashboardComponent },
-  {path :'profil', component : ProfileComponent},
-  {path :'client', component : ClientComponent},
-  {path :'facture', component :ReparationComponent},
-  {path :'reception', component : ReceptionComponent},
-  {path :'add', component : AjoutVoitureComponent},
-  {path :'etat', component : EtatComponent},
-  {path :'sortie', component : SortieComponent },
-  {path :'signout', component : SignoutComponent }
- 
+    { path:'' ,redirectTo:'dashboard', pathMatch:'full'},
+    { path:'dashboard', component : FdasboardComponent },
+    { path :'profil', component : ProfileComponent},
+    { path :'client', component : ClientComponent},
+    { path:'facture', component : FactureComponent },
+    { path:'facture/paye', component : PayementComponent },
+    { path:'depense', component : DepenseComponent },
+    { path:'pers', component : PersonnelleComponent },
+    { path:'enter', component : EntreeComponent },
+    { path :'signout', component : SignoutComponent }
+
 ]}]
   @NgModule({
-    imports:[RouterModule.forRoot(routes)],
+    imports:[RouterModule.forChild(routes)],
     exports:[RouterModule]
   })
 export class AdminFinancialRoutingModule

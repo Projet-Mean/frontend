@@ -10,24 +10,29 @@ import { EtatComponent } from './etat/etat.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { LougoutComponent } from './lougout/lougout.component';
 import { SignoutComponent } from './signout/signout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FactureComponent } from './facture/facture.component';
+import { PayementComponent } from './payement/payement.component';
 
 
 
 @NgModule({
   declarations: [
-   
     AlayoutComponent,
-        DashboardComponent,
-        ProfileComponent,
-        EtatComponent,
-        SidemenuComponent,
-        LougoutComponent,
-        SignoutComponent,
-      
+    DashboardComponent,
+    ProfileComponent,
+    EtatComponent,
+    SidemenuComponent,
+    LougoutComponent,
+    SignoutComponent,
+    FactureComponent,
+    PayementComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 
 })

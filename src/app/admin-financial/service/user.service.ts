@@ -1,7 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, throwError } from 'rxjs';
-import { Userclient } from 'src/app/auth/shared/userclient.model';
 
 @Injectable({
   providedIn: 'root'

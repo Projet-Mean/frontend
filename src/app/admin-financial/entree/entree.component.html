@@ -21324,61 +21324,25 @@ dl li {
                               Label
                             </th>
                             <th>
+                              Mois
+                            </th>
+                            <th>
                               Montant
-                            </th>
-                            <th>
-                              Facture
-                            </th>
-                            <th>
-                              Date
                             </th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="py-1">
-                              Payement
+                          <tr *ngFor="let item of items">
+                            <td>
+                              {{item.label}}
                             </td>
                             <td>
-                              10 000AR
+                              {{item.mois}}
                             </td>
                             <td>
-                              Fact121
-                            </td>
-                            <td>
-                              13/01/2023
+                              {{item.montant}}
                             </td>
                           </tr>
-                          <tr>
-                            <td class="py-1">
-                              Payement
-                            </td>
-                            <td>
-                              10 000AR
-                            </td>
-                            <td>
-                              Fact121
-                            </td>
-                            <td>
-                              13/01/2023
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="py-1">
-                              Payement
-                            </td>
-                            <td>
-                              10 000AR
-                            </td>
-                            <td>
-                              Fact121
-                            </td>
-                            <td>
-                              13/01/2023
-                            </td>
-                          </tr>
-
-
                         </tbody>
                       </table>
                     </div>

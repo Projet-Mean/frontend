@@ -1,5 +1,10 @@
 import { ValidateServiceService } from './../shared/validate-service.service';
-import { Component } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
+import { CrudService } from '../shared/crud.service';
+import { FormGroup, FormBuilder } from "@angular/forms";
+
+
 
 
 @Component({
@@ -9,25 +14,38 @@ import { Component } from '@angular/core';
 
 })
 export class SignupComponent {
-form ={
-    // nom:String,
-    // prenom:String,
-    // civilite:String,
-    // adresse:String,
-    // telephone:Number,
-    // email:String,
-    // password:String,
-    // passwordconfirmation:String
-    nom:null,
-    prenom:null,
-    civilite:null,
-    adresse:null,
-    telephone:null,
-    email:null,
-    password:null,
-    passwordconfirmation:null
-}
-    
+
+  UserClient : FormGroup;
+   
+  constructor(
+    public formBuilder: FormBuilder,
+    private router: Router,
+    private ngZone: NgZone,
+  //  private crudService: CrudService
+  ) { 
+    this.UserClient = this.formBuilder.group({
+      nom: [''],
+      prenom: [''],
+      civilite: [''],
+      adresse:[''],
+      telephone:[],
+      email:[''],
+      password:[''],
+      passwordConfirmation:['']
+    })
+  }
+  ngOnInit() { }
+ 
+  onSubmit(): any {
+    /* this.crudService.AddUserclient(this.UserClient.value)
+    .subscribe(() => {
+        console.log('Data added successfully!')
+        this.ngZone.run(() => this.router.navigateByUrl('/client'))
+      }, (err) => {
+        console.log(err);
+    }); */
+  }
+
     
   
 // required field 
@@ -46,18 +64,18 @@ form ={
 //   }
 // }
  
-  onSubmit(){
-    const userclient={
-      fornom : this.form.nom,
-      prenom : this.form.prenom,
-      civilite : this.form.civilite,
-      adresse : this.form.adresse,
-      telephone: this.form.telephone,
-      email : this.form.email,
-      password : this.form.password,
-      passwordconfirmation: this.form.passwordconfirmation,
-    }
-    console.log(123);
-  }
+  // onSubmit(){
+  //   const userclient={
+  //     fonom : this.form.nom,
+  //     prenom : this.form.prenom,
+  //     civilite : this.form.civilite,
+  //     adresse : this.form.adresse,
+  //     telephone: this.form.telephone,
+  //     email : this.form.email,
+  //     password : this.form.password,
+  //     passwordconfirmation: this.form.passwordconfirmation,
+  //   }
+  //   console.log(123);
+  // }
 
 }

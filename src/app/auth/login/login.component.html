@@ -40,7 +40,7 @@
     .loader .loader_div {
         border: 6px solid #ffebea;
         border-radius: 50%;
-        border-top: 6px solid #ff574d;
+        border-top: 6px solid #1b5e8c;
         width: 60px;
         height: 60px;
         -webkit-animation: spin 1.5s linear infinite;
@@ -112,7 +112,7 @@
         line-height: 1;
         display: inline-block;
         padding: 4px 5px 2px;
-        color: #ff574d;
+        color: #1b5e8c;
         font-weight: 700;
         border-radius: 4px;
         margin-right: 10px;
@@ -131,7 +131,7 @@
         bottom: 0;
         border-radius: 10px 0 0 10px;
         padding: 80px 20px;
-        background: #ff574d;
+        background: #1b5e8c;
         position: relative;
         height: 100%;
         display: flex;
@@ -152,7 +152,7 @@
         margin-top: -20px;
         font-family: fontAwesome;
         line-height: 40px;
-        color: #ff574d;
+        color: #1b5e8c;
         font-size: 14px;
         box-shadow: 0 0 20px rgba(0,0,0,0.15);
     }
@@ -173,7 +173,7 @@
     .login_wrapper .btn-outline {
         border-radius: 3px;
         padding: 6px 30px 6px 30px;
-        color: #ff574d;
+        color: #1b5e8c;
         background: #fff;
         letter-spacing: 1px;
         font-size: 14px;
@@ -201,7 +201,7 @@
         padding: 0 0 15px;
     }
     .login_wrapper .login-inner-form h3 span {
-        color: #ff574d;
+        color: #1b5e8c;
     }
     .login_wrapper .login-inner-form h3:after {
         display: block;
@@ -211,7 +211,7 @@
         right: 0;
         width: 50px;
         height: 1px;
-        background: #ff574d;
+        background: #1b5e8c;
         margin: 0 auto;
         bottom: 0;
     }
@@ -279,7 +279,7 @@
     }
     .login_wrapper .login_right .social-list li a:hover {
         background: #fff;
-        color: #ff574d;
+        color: #1b5e8c;
         transform: translateY(-3px);
     }
     .login_wrapper .login-inner-form input[type=checkbox], input[type=radio] {
@@ -293,12 +293,12 @@
         box-shadow: none;
     }
     .login_wrapper .login-inner-form .btn-theme {
-        background: #ff574d;
+        background: #1b5e8c;
         border: none;
         color: #fff;
     }
     .login_wrapper .login-inner-form .btn-theme:hover {
-        background: #ec4a40;
+        background: #1b5e8c;
         box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
     }
     .login_wrapper .login-inner-form .terms{
@@ -339,8 +339,8 @@
         color: #403838;
     }
     .login_wrapper .login-inner-form .checkbox-input input[type="checkbox"]:checked + label::before {
-        background-color: #ff574d;
-        border-color: #ff574d;
+        background-color: #1b5e8c;
+        border-color: #1b5e8c;
     }
     .login_wrapper .login-inner-form input[type=checkbox]:checked + label:before {
         font-weight: normal;
@@ -348,8 +348,8 @@
         line-height: 15px;
         font-size: 10px;
         content: "\f00c";
-        background-color: #ff574d;
-        border-color: #ff574d;
+        background-color: #1b5e8c;
+        border-color: #1b5e8c;
         font-family: fontAwesome;
     }
     .login_wrapper .login-inner-form input[type=checkbox], input[type=radio] {
@@ -360,7 +360,17 @@
         color: #403838;
         float: right;
     }
-    
+    .btn.btn-primary {
+    background: #1b5e8c !important;
+    border-color: #1b5e8c !important;
+    color: #fff; }
+    .btn.btn-primary:hover, .btn.btn-primary:focus {
+      border-color: #1f92a4  !important;
+      background: #1f92a4  !important; }
+
+    img {
+        background-color: #1b5e8c;
+    }
     
     
     /** Media Queries 
@@ -454,10 +464,11 @@
                                       <a href="forgot-password.html">Forgot Password</a>
                                   </div>
                                   <div class="form-group">
-                                      <button type="submit" class="btn-md btn-theme btn-block">Login</button>
+                                    <input type="submit" value="Se connecter" class="btn btn-primary">
+                                    <div class="submitting"></div>
                                   </div>
                               </form>
-                              <p>Don't have an account?<a [routerLink]="['signup']"> Register here</a></p>
+                              <p>Don't have an account?<a [routerLink]="['/../../auth/signup']"> Register here</a></p>
                           </div>
                       </div>
                   </div>

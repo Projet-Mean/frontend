@@ -6,6 +6,9 @@ background-color:#184e8e;
 padding-bottom:80px;
 font-family:'Source Sans Pro', sans-serif;
 }
+.signup-ml{
+  margin-left: 10px!important;
+}
 
 @media (min-width:600px) {
 .header-blue {
@@ -170,8 +173,8 @@ text-align:center;
                 <li class="nav-item" ><a class="nav-link active" [routerLink]="['equipe']">Notre equipe</a></li>
                 <li class="nav-item" ><a class="nav-link active" [routerLink]="['service']">Services</a></li>
                 <li class="nav-item" ><a class="nav-link active" [routerLink]="['contact']">Contact</a></li>
-                <li class="nav-item" ><span class="navbar-text"> <a  [routerLink]="['login']" class="login">Log In</a></span>   </li>
-                <li class="nav-item" ><span class="navbar-text"> <a class="btn btn-light action-button" role="button" [routerLink]="['signup']">Sign Up</a> </span></li>
+                <li class="nav-item" ><span class="navbar-text"> <a  [routerLink]="['../../auth/login']" class="login">Log In</a></span>   </li>
+                <li class="nav-item signup-ml" ><span class="navbar-text"> <a class="btn btn-light action-button" role="button" [routerLink]="['../../auth/signup']">Sign Up</a> </span></li>
                 </ul>
 
             </nav>

@@ -1,5 +1,5 @@
 import { Component , OnInit } from '@angular/core';
-import { UserService } from '../../admin-workshop/service/user.service';
+import { UserService } from '../service/user.service';
 interface Item {
   nom: string;
   prenom: string;
@@ -15,8 +15,8 @@ interface Item {
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.css']
 })
-export class ClientComponent {
-  selectedItem?: Item;
+export class ClientComponent implements OnInit{
+  selectedItem?:Item;
   items=[
     {
       nom: "",

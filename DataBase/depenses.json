@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "63d57d03fff0d046f97d320f"
+  },
+  "label": "salaire",
+  "mois": "Novembre",
+  "montant": "2000"
+},{
+  "_id": {
+    "$oid": "63d57d80fff0d046f97d3210"
+  },
+  "label": "Loyer",
+  "mois": "Novembre",
+  "montant": "1000"
+},{
+  "_id": {
+    "$oid": "63d57d96fff0d046f97d3211"
+  },
+  "label": "salaire",
+  "mois": "Decembre",
+  "montant": "2000"
+},{
+  "_id": {
+    "$oid": "63d57da6fff0d046f97d3212"
+  },
+  "label": "Loyer",
+  "mois": "Decembre",
+  "montant": "1000"
+},{
+  "_id": {
+    "$oid": "63d57dbffff0d046f97d3213"
+  },
+  "label": "Loyer",
+  "mois": "Janvier",
+  "montant": "2000"
+},{
+  "_id": {
+    "$oid": "63d57dd6fff0d046f97d3214"
+  },
+  "label": "salaire",
+  "mois": "Janvier",
+  "montant": "2000"
+}]

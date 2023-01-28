@@ -17,7 +17,7 @@ interface Item {
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
-  selectedItem?: Item;
+  selectedItem?:Item;
   items=[
     {
       nom: "",
@@ -54,6 +54,6 @@ export class ClientComponent implements OnInit {
   showDetails(item : Item) {
     this.selectedItem = item;
   }
-      
+
 
 }

@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../service/user.service';
 interface Item {
-  name: string;
-  etat: any;
-  description: string;
-  liste: degat[];
-}
-interface degat {
-  name: string;
-  etat: string;
-  description: string;
+  nom: string;
+  prenom: string;
+  civilite: string;
+  adresse: string;
+  telephone: string;
+  email: string;
+  password: string;
+  passwordconfirmation: string;
 }
 
 @Component({
@@ -17,22 +16,42 @@ interface degat {
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.css']
 })
-export class ClientComponent {
-  items: Item[];
-  selectedItem: degat[] | undefined;
+export class ClientComponent implements OnInit {
+  selectedItem?: Item;
+  items=[
+    {
+      nom: "",
+      prenom: "",
+      civilite: "",
+      adresse: "",
+      telephone: "",
+      email: "",
+      password: "",
+      passwordconfirmation: ""
+    }];
+  constructor(public userServ:UserService){
+  }
 
-  constructor(){
-    this.items = [
-      { name: 'Rakoto',etat:25, description: '9956TAA', liste:
-        [{ name: 'Moteur',etat:"15/02/2023", description: '10 000 Ar' },
-        { name: 'frein',etat:"15/02/2023", description: '50 000 Ar' },
-        { name: 'Vitre',etat:"15/02/2023", description: '30 000 Ar' }]},
-      { name: 'ratrema',etat:25, description: '5511TBB', liste:
-        [{ name: 'Carrosserie',etat:"29/01/2023", description: '10 000 Ar' }]},
-    ];
+  ngOnInit() {
+    this.userServ.GetAllclient().subscribe(res => {
+      for(let client of res.userclients){
+        this.items.push(
+          {
+            nom: client.nom,
+            prenom: client.prenom,
+            civilite: client.civilite,
+            adresse: client.adresse,
+            telephone: client.telephone,
+            email: client.email,
+            password: client.password,
+            passwordconfirmation: client.passwordconfirmation
+          }
+        )
+      }
+    });
   }
 
   showDetails(item : Item) {
-    this.selectedItem = item.liste;
+    this.selectedItem = item;
   }
 }

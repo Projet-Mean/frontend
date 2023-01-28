@@ -21313,10 +21313,10 @@ dl li {
                         <tbody>
                           <tr *ngFor="let item of items">
                             <td class="py-1">
-                              {{ item.name }}
+                              {{ item.nom }}
                             </td>
                             <td>
-                              {{ item.description }}
+                              {{ item.email }}
                             </td>
                             <td>
                               <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
@@ -21339,10 +21339,10 @@ dl li {
                       <p class="card-title">Profil</p>
                     <hr/>
                     <div style="width: 50%;float:left">
-                      <label style="min-width :30%">Nom : Andrianjafy</label>
-                      <label style="min-width :30%">Prénom : Baovola Santatra</label>
-                      <label style="min-width :30%">Adresse : de aiza zany le Hoe Fitia?</label>
-                      <label style="min-width :30%">Adresse email : alka@akalj.jah </label>
+                      <label style="min-width :30%">Nom : {{selectedItem.nom}}</label>
+                      <label style="min-width :30%">Prénom : {{selectedItem.prenom}}</label>
+                      <label style="min-width :30%">Adresse : {{selectedItem.adresse}}</label>
+                      <label style="min-width :30%">Adresse email : {{selectedItem.email}} </label>
                       <label style="min-width :30%">Client depuis : Janvier 2023 </label>
                       <label style="min-width :30%">Voiture : 1235TBH </label>
                       <label style="min-width :30%">Marque  : Renault </label>

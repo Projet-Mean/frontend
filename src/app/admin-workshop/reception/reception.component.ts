@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-interface degat {
-  name: string;
-  description: string;
-  file: string;
-}
+import { ReparationService } from '../service/reparation.service';
 @Component({
   selector: 'app-reception',
   templateUrl: './reception.component.html',
@@ -25,6 +20,35 @@ export class ReceptionComponent {
   degats= [
     { name: '',description: '', file: '' }];
 
+  constructor(public repServ:ReparationService){
+  }
+  items=[
+    {
+      immatriculation: "",
+      id_client: "",
+      marque: "",
+      modele: "",
+      annee: "",
+    }];
+  ngOnInit() {
+    this.repServ.getAllvoitureAt().subscribe(res => {
+      console.log(res);
+      /*for(let client of res.userclients){
+        this.items.push(
+          {
+            nom: client.nom,
+            prenom: client.prenom,
+            civilite: client.civilite,
+            adresse: client.adresse,
+            telephone: client.telephone,
+            email: client.email,
+            password: client.password,
+            passwordconfirmation: client.passwordconfirmation
+          }
+        )
+      }*/
+    });
+  }
   depot() {
     //this.openDialog();
   }

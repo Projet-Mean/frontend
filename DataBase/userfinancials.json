@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "63d55592fff0d046f97d3207"
+  },
+  "nom": "Ranaivoson",
+  "prenom": "Valisoa",
+  "civilite": "Homme",
+  "adresse": "Ankaraobato",
+  "telephone": "0326598745",
+  "email": "val@val.com",
+  "password": "okoke"
+}]

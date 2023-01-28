@@ -8,7 +8,6 @@ import { ClientComponent } from './client/client.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WdashboardComponent } from './wdashboard/wdashboard.component';
 import { WlayoutComponent } from './wlayout/wlayout.component';
-
 import { NgModule } from "@angular/core";
 import { RouterModule,Routes } from "@angular/router";
 

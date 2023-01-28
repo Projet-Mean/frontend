@@ -141,6 +141,9 @@ h6 {
 .navbar {
   padding: 0;
 }
+.main-container{
+  background-color: #ffffff;
+}
 
 .navbar ul {
   margin: 0;
@@ -1048,7 +1051,9 @@ section {
   font-size: 20px;
   color: #36343a;
 }
-
+.container{
+  background-color: #ffffff;
+}
 .team .member span {
   display: block;
   font-size: 15px;
@@ -1488,6 +1493,8 @@ section {
     <span class="sr-only">Next</span>
   </a>
 </div>
+<div class ="main-container">
+
   <div class="container">
     <div class="container" style="text-align: center;">
       <h1 style="color: #002966;">Nos <a href="https://unsplash.com">Services</a> </h1>
@@ -1517,9 +1524,9 @@ section {
               <img src="../../../assets/images/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Réparation</h4>
-                <p>Moteur, équipement, carrosseerie...</p>
+                <p>Moteur, équipement, carrosserie...</p>
                 <div class="portfolio-links">
-                  <a href="../../../assets/images/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="../../../assets/images/portfolio/portfolio-2.jpg" [routerLink]="['']" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="#" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -1588,6 +1595,7 @@ section {
     </section><!-- End Portfolio Section -->
 
   </main><!-- End #main -->
+</div>
 </div>
  <script>
 

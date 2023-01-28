@@ -14,11 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
     HttpClientModule
+    ReactiveFormsModule,
+    RouterModule
 
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],

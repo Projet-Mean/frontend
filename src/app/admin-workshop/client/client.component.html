@@ -21311,17 +21311,26 @@ dl li {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let item of items">
-                            <td class="py-1">
-                              {{ item.name }}
-                            </td>
-                            <td>
-                              {{ item.description }}
-                            </td>
-                            <td>
-                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
-                            </td>
-                          </tr>
+                          
+                            <tr *ngFor="let user of client; let i = index">
+                              <th scope="row">{{user._id}}</th>
+                              <td>{{user.nom}}</td>
+                              <td>{{user.prenom}}</td>
+                              <td>{{user.civilite}}</td>
+                              <td>{{user.telephone}}</td>
+                              <td>{{user.adresse}}</td>
+                              <td>{{user.email}}</td>
+                            
+                              <td class="text-center">
+                                <button class="btn btn-dark btn-rounded btn-fw" > Voir détails</button>
+                                <button class="btn btn-sm btn-primary">Edit</button>
+                                <button class="btn btn-sm btn-danger" (click)="deleteUserclient(user._id, i)">Delete</button>
+                              </td>
+                              </tr>
+                      
+                              
+                           
+                          
                         </tbody>
                       </table>
                     </div>
@@ -21335,17 +21344,18 @@ dl li {
               <div class="col-md-12 stretch-card">
                 <div class="card">
                   <div class="card-body pb-0">
-                    <div *ngIf="selectedItem">
+                    <!-- <div *ngIf="selectedItem"> -->
+                      <div></div>
                       <p class="card-title">Profil</p>
                     <hr/>
                     <div style="width: 50%;float:left">
-                      <label style="min-width :30%">Nom : Andrianjafy</label>
-                      <label style="min-width :30%">Prénom : Baovola Santatra</label>
-                      <label style="min-width :30%">Adresse : de aiza zany le Hoe Fitia?</label>
-                      <label style="min-width :30%">Adresse email : alka@akalj.jah </label>
-                      <label style="min-width :30%">Client depuis : Janvier 2023 </label>
-                      <label style="min-width :30%">Voiture : 1235TBH </label>
-                      <label style="min-width :30%">Marque  : Renault </label>
+                      <label style="min-width :30%">Nom : </label>
+                      <label style="min-width :30%">Prénom : </label>
+                      <label style="min-width :30%">Civilite : </label>
+                      <label style="min-width :30%">Telephone : </label>
+                      <label style="min-width :30%">Adresse :  </label>
+                      <label style="min-width :30%">email : </label>
+                     
                     </div>
                     <img class="rounded-circle" src="../../../assets/images/users/4.jpg" alt="" style="width: 40%; height: 50%;margin:auto; float:right">
                     </div>
@@ -21379,9 +21389,9 @@ dl li {
         </div>
       </footer>
       <!-- partial -->
-    </div>
+
     <!-- main-panel ends -->
-  </div>
+
     <!-- page-body-wrapper ends -->
   <!-- container-scroller -->
 

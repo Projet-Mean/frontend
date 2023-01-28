@@ -1,16 +1,7 @@
 import { Component } from '@angular/core';
+import { CrudService } from '../../auth/shared/crud.service';
 
-interface Item {
-  name: string;
-  etat: any;
-  description: string;
-  liste: degat[];
-}
-interface degat {
-  name: string;
-  etat: string;
-  description: string;
-}
+
 
 @Component({
   selector: 'app-client',
@@ -18,21 +9,27 @@ interface degat {
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent {
-  items: Item[];
-  selectedItem: degat[] | undefined;
+  
 
-  constructor(){
-    this.items = [
-      { name: 'Rakoto',etat:25, description: '9956TAA', liste:
-        [{ name: 'Moteur',etat:"15/02/2023", description: '10 000 Ar' },
-        { name: 'frein',etat:"15/02/2023", description: '50 000 Ar' },
-        { name: 'Vitre',etat:"15/02/2023", description: '30 000 Ar' }]},
-      { name: 'ratrema',etat:25, description: '5511TBB', liste:
-        [{ name: 'Carrosserie',etat:"29/01/2023", description: '10 000 Ar' }]},
-    ];
+  client:any = [];
+ 
+  constructor(private crudService: CrudService) { }
+ 
+  ngOnInit(): void {
+    this.crudService.GetUserclient().subscribe(res => {
+      console.log(res)
+      this.client =res;
+    });    
   }
+ 
+  deleteUserclient(id:any, i:any) {
+    console.log(id);
+    if(window.confirm('Do you want to go ahead?')) {
+      this.crudService.deleteUserclient(id).subscribe((res) => {
+        this.client.splice(i, 1);
+      })
+    }
+  }
+      
 
-  showDetails(item : Item) {
-    this.selectedItem = item.liste;
-  }
 }

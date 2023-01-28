@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "63d55427fff0d046f97d31fe"
+  },
+  "nom": "ANdria",
+  "prenom": "Fitia",
+  "civilite": "Femme",
+  "adresse": "Ambohipo",
+  "telephone": "032658744898",
+  "email": "baovola@gmail.com",
+  "password": "okoke"
+}]

@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "63d51f03fff0d046f97d31ef"
+  },
+  "nom": "Rafaly",
+  "prenom": "Fredy",
+  "civilite": "Homme",
+  "adresse": "Ankaraobato Tana",
+  "telephone": "0236598756",
+  "email": "okbe@45.com",
+  "password": "okebeoa",
+  "passwordconfirmation": "okebeoa"
+},{
+  "_id": {
+    "$oid": "63d51fa2fff0d046f97d31f0"
+  },
+  "nom": "Rakotroka",
+  "prenom": "Mpanao film",
+  "civilite": "Homme",
+  "adresse": "Tanjombato Tana",
+  "telephone": "0236545756",
+  "email": "okbeKely@45.com",
+  "password": "okebeoa",
+  "passwordconfirmation": "okebeoa"
+},{
+  "_id": {
+    "$oid": "63d51fc4fff0d046f97d31f1"
+  },
+  "nom": "Ramaro",
+  "prenom": "jean Marie",
+  "civilite": "Homme",
+  "adresse": "Ivandry Tana",
+  "telephone": "0325555756",
+  "email": "okbeKelyoa@45.com",
+  "password": "okebeoa",
+  "passwordconfirmation": "okebeoa"
+}]

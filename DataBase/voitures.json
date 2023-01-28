@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "63d52b5bfff0d046f97d31f8"
+  },
+  "id_client": {
+    "$oid": "63d51f03fff0d046f97d31ef"
+  },
+  "marque": "Renault",
+  "modele": "Utilitaire",
+  "annee": "2018",
+  "attente": false
+},{
+  "_id": {
+    "$oid": "63d52bd5fff0d046f97d31fa"
+  },
+  "id_client": {
+    "$oid": "63d51fa2fff0d046f97d31f0"
+  },
+  "marque": "Peugeot",
+  "modele": "Utilitaire",
+  "annee": "2010",
+  "attente": true
+},{
+  "_id": {
+    "$oid": "63d52bfffff0d046f97d31fb"
+  },
+  "id_client": {
+    "$oid": "63d51fc4fff0d046f97d31f1"
+  },
+  "marque": "Toyota",
+  "modele": "4x4",
+  "annee": "2020",
+  "attente": true
+}]

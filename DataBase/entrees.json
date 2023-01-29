@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "63d57c65fff0d046f97d320a"
+  },
+  "label": "Gain",
+  "mois": "Novembre",
+  "montant": "5000"
+},{
+  "_id": {
+    "$oid": "63d57cc3fff0d046f97d320b"
+  },
+  "label": "Gain",
+  "mois": "decembre",
+  "montant": "15000"
+},{
+  "_id": {
+    "$oid": "63d57cd7fff0d046f97d320c"
+  },
+  "label": "Gain",
+  "mois": "Janvier",
+  "montant": "35000"
+}]

@@ -8,7 +8,18 @@ interface Voiture {
   marque: string,
   modele: string,
   annee: any,
-  attente: boolean
+  attente: boolean,
+  assigne: string
+}
+interface Voiture2 {
+  _id: string,
+  immatriculation: string,
+  id_client: string,
+  marque: string,
+  modele: string,
+  annee: string,
+  attente: boolean,
+  assigne: string
 }
 interface Degat {
   reference: string,
@@ -19,6 +30,8 @@ interface Degat {
   dateentree: string,
   datesortie: string,
   montanttotal: string,
+  status : string,
+  assigne : string,
 }
 @Injectable({
   providedIn: 'root'
@@ -40,8 +53,7 @@ export class VoitureService {
       )
   }
   addDeg(data: Degat): Observable<any> {
-    console.log(data);
-    let API_URL = `${this.REST_API}/api/api/repair`;
+    let API_URL = `${this.REST_API}/api/api/add`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)
@@ -49,6 +61,10 @@ export class VoitureService {
   }
   GetAllclient(): Observable<any>{
     return this.httpClient.get(`${this.REST_API}/api/cli/custumer`);
+  }
+
+  assigne(data : Voiture2) {
+    return this.httpClient.put(`${this.REST_API}/api/car/${data._id}`,data);
   }
 
   handleError(error: HttpErrorResponse) {

@@ -1,16 +1,7 @@
 import { Component } from '@angular/core';
 
-interface Item {
-  name: string;
-  etat: any;
-  description: string;
-  liste: degat[];
-}
-interface degat {
-  name: string;
-  etat: string;
-  description: string;
-}
+import { ReparationService } from '../service/reparation.service';
+import { VoitureService } from '../service/voiture.service';
 
 @Component({
   selector: 'app-etat',
@@ -18,21 +9,95 @@ interface degat {
   styleUrls: ['./etat.component.css']
 })
 export class EtatComponent {
-  items: Item[];
-  selectedItem: degat[] | undefined;
+  selectedItem: any;
 
-  constructor(){
-    this.items = [
-      { name: '5864TBH',etat:25, description: '90 000 Ar', liste:
-        [{ name: 'Moteur',etat:"15/02/2023", description: '10 000 Ar' },
-        { name: 'frein',etat:"15/02/2023", description: '50 000 Ar' },
-        { name: 'Vitre',etat:"15/02/2023", description: '30 000 Ar' }]},
-      { name: '9956TAA',etat:25, description: '90 000 Ar', liste:
-        [{ name: 'Carrosserie',etat:"29/01/2023", description: '10 000 Ar' }]},
-    ];
+  constructor(public repServ:ReparationService,public voitServ:VoitureService){
+  }
+  items=[
+    {
+      _id:"",
+      immatriculation: "",
+      id_client: "",
+      marque: "",
+      modele: "",
+      annee: "",
+      attente: true,
+      assigne: ""
+    }
+  ];
+  ngOnInit() {
+    this.items=[];
+    this.selectedItem=[];
+    this.repServ.getAllvoitureMine().subscribe(res => {
+      for(let client of res.voitureModel){
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: client.id_client,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne
+          }
+        )
+      }
+    });
   }
 
-  showDetails(item : Item) {
-    this.selectedItem = item.liste;
+  showDetails(id : string) {
+    this.selectedItem=[];
+    this.repServ.getBymatr(id).subscribe(res => {
+      this.selectedItem.push(
+        {
+          _id:res.reparationsModel._id,
+          reference: res.reparationsModel.reference,
+          immatriculation: res.reparationsModel.immatriculation,
+          panne :res.reparationsModel.panne,
+          solution:res.reparationsModel.solution,
+          responsable: res.reparationsModel.responsable,
+          dateentree: res.reparationsModel.dateentree,
+          datesortie: res.reparationsModel.datesortie,
+          montanttotal: res.reparationsModel.montanttotal,
+          status:res.reparationsModel.status
+        }
+      )
+      /*for(let client of res.reparationsModel){
+        this.selectedItem.push(
+          {
+            _id: client._id,
+            name: client.panne,
+            etat: client.status
+          }
+        )
+      }*/
+    });
+  }
+  finir(id:any){
+    id.status="fini";
+    this.repServ.Finir(id).subscribe(res => {
+      console.log(res);
+    });
+    this.selectedItem=[];
+    this.repServ.getBymatr(id).subscribe(res => {
+      this.selectedItem.push(
+        {
+          _id: res.reparationsModel._id,
+          name: res.reparationsModel.panne,
+          etat: res.reparationsModel.status
+        }
+      )
+      /*for(let client of res.reparationsModel){
+        this.selectedItem.push(
+          {
+            _id: client._id,
+            name: client.panne,
+            etat: client.status
+          }
+        )
+      }*/
+    });
+
   }
 }

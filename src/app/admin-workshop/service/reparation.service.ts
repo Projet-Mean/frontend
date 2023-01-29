@@ -37,31 +37,21 @@ export class ReparationService {
   getAllvoitureAt(): Observable<any> {
     return this.httpClient.get(`${this.REST_API}/carsAt`);
   }
+  getAllvoitureMine(): Observable<any> {
+    return this.httpClient.get(`${this.REST_API}/carsMine/63d55427fff0d046f97d31fe`);
+  }
   getAllvoiture(): Observable<any> {
     return this.httpClient.get(`${this.REST_API}/cars`);
   }
   getVoituresAt() {
     return this.httpClient.get(`${this.REST_API}/custumer`);
   }
-
-  // Get single object
-  PrendreEnMain(id:any): Observable<any> {
-    let API_URL = `${this.REST_API}/custumer/${id}`;
-    return this.httpClient.get(API_URL, { headers: this.httpHeaders })
-      .pipe(map((res: any) => {
-          return res || {}
-        }),
-        catchError(this.handleError)
-      )
+  getBymatr(id:any): Observable<any> {
+    return this.httpClient.get(`${this.REST_API}/api/bymatr/${id}`);
   }
-  Finir(id:any): Observable<any> {
-    let API_URL = `${this.REST_API}/custumer/${id}`;
-    return this.httpClient.get(API_URL, { headers: this.httpHeaders })
-      .pipe(map((res: any) => {
-          return res || {}
-        }),
-        catchError(this.handleError)
-      )
+
+  Finir(data:any): Observable<any> {
+    return this.httpClient.put(`${this.REST_API}/api/repair/${data._id}`,data);
   }
 
   // Error

@@ -21330,13 +21330,13 @@ dl li {
                         <thead>
                           <tr>
                             <th>
-                              Propriétaire
-                            </th>
-                            <th>
                               Matricule
                             </th>
                             <th>
-                              Nombre de réparation
+                              Propriétaire
+                            </th>
+                            <th>
+                              marque
                             </th>
                             <th>
                               Action
@@ -21344,63 +21344,20 @@ dl li {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="py-1">
-                              <img src="./assets/images/faces/face1.jpg" alt="image"/>
+                          <tr *ngFor="let voit of items">
+                            <td>
+                              {{voit.immatriculation}}
                             </td>
                             <td>
-                              5822TBH
+                              {{voit.marque}}
                             </td>
                             <td>
-                              1
+                              {{voit.modele}}
                             </td>
                             <td>
-                              <button class="btn btn-success btn-rounded btn-fw"> Prendre en main</button>
+                              <button class="btn btn-success btn-rounded btn-fw" (click)="take(voit)"> Prendre en main</button>
                             </td>
                           </tr>
-                          <tr>
-                            <td class="py-1">
-                              <img src="./assets/images/faces/face1.jpg" alt="image"/>
-                            </td>
-                            <td>
-                              5822TBH
-                            </td>
-                            <td>
-                              1
-                            </td>
-                            <td>
-                              <button class="btn btn-success btn-rounded btn-fw"> Prendre en main</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="py-1">
-                              <img src="./assets/images/faces/face1.jpg" alt="image"/>
-                            </td>
-                            <td>
-                              5822TBH
-                            </td>
-                            <td>
-                              1
-                            </td>
-                            <td>
-                              <button class="btn btn-success btn-rounded btn-fw"> Prendre en main</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="py-1">
-                              <img src="./assets/images/faces/face1.jpg" alt="image"/>
-                            </td>
-                            <td>
-                              5822TBH
-                            </td>
-                            <td>
-                              1
-                            </td>
-                            <td>
-                              <button class="btn btn-success btn-rounded btn-fw"> Prendre en main</button>
-                            </td>
-                          </tr>
-
                         </tbody>
                       </table>
                     </div>

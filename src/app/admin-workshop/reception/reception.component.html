@@ -21296,21 +21296,23 @@ dl li {
                   <div class="card-body">
                     <p class="card-title">Ajouter Voiture</p>
                     <hr/>
-                    <form (submit)="depot()" method="GET" style="padding: 20px;text-align:center" >
-                      <label style="float: left;width:150px;margin-left: 5%;">Matricule :</label> <input class="form-control bg-dark border-0" type="text" placeholder="Matricule" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="matricule" name="matricule">
-                      <label style="float: left;width:150px;margin-left: 5%;">Marque :</label><select class="form-control bg-dark border-0" placeholder="Marque" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="marque" name="marque"><option value="#">Marque</option><option value="Honda">Honda</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option></select>
-                      <label style="float: left;width:150px;margin-left: 5%;">Type :</label><select class="form-control bg-dark border-0" placeholder="type" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="type" name="type"><option value="#">Type</option><option value="Berline">Berline</option><option value="SUV">SUV</option><option value="Fourgonnette">Fourgonnette</option></select>
-                      <label style="float: left;width:150px;margin-left: 5%;">Date de depôts :</label><input class="form-control bg-dark border-0" placeholder="Date de dépot" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="date_de_depot" type="date" placeholder="Date de depot" name="date">
-                      <div *ngIf="degats.length>0">
+                    <form method="GET" style="padding: 20px;text-align:center" >
+                      <div style="border: 2px solid lightgrey;border-radius:10px; padding:5px; margin-bottom:5px">
+                        <label style="float: left;width:150px;margin-left: 5%;">Client :</label><select class="form-control bg-dark border-0" placeholder="Client" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="id_client" name="id" *ngIf="cli"><option *ngFor="let clis of cli" value="{{clis.id}}" >{{clis.nom}}</option></select>
+                        <label style="float: left;width:150px;margin-left: 5%;">Matricule :</label> <input class="form-control bg-dark border-0" type="text" placeholder="Matricule" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="matricule" name="matricule">
+                        <label style="float: left;width:150px;margin-left: 5%;">Marque :</label><select class="form-control bg-dark border-0" placeholder="Marque" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="marque" name="marque"><option value="#">Marque</option><option value="Honda">Honda</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option></select>
+                        <label style="float: left;width:150px;margin-left: 5%;">Type :</label><select class="form-control bg-dark border-0" placeholder="type" style="margin-bottom: 10px;width: 53%;margin-left: 10;color:white" [(ngModel)]="type" name="type"><option value="#">Type</option><option value="Berline">Berline</option><option value="SUV">SUV</option><option value="Fourgonnette">Fourgonnette</option></select>
+                        <label style="float: left;width:150px;margin-left: 5%;">Année :</label><input class="form-control bg-dark border-0" type="numbre" min="1900" max="2024" placeholder="Année" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="annee" name="annee">
+                        <label style="float: left;width:150px;margin-left: 5%;">Date de depôts :</label><input class="form-control bg-dark border-0" placeholder="Date de dépot" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="date_de_depot" type="date" placeholder="Date de depot" name="date">
+                      </div>
+                      <div *ngIf="degats">
                         <div style="border: 2px solid lightgrey;border-radius:10px; padding:5px; margin-bottom:5px" *ngFor="let degat of degats">
-                          <label style="float: left;width:150px;margin-left: 5%;">Dégât :</label> <input class="form-control bg-dark border-0" type="text" placeholder="label" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="tmpLabel" name="tmpLabel">
-                          <label style="float: left;width:150px;margin-left: 5%;">Description :</label> <input class="form-control bg-dark border-0" type="text" placeholder="Description" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="tmpDescr" name="tmpDescr">
-                          <label style="float: left;width:150px;margin-left: 5%;">Fichier :</label> <input class="form-control bg-dark border-0" type="file" placeholder="fichier" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="tmpFile" name="tmpLabel">
+                          <label style="float: left;width:150px;margin-left: 5%;">Dégât :</label> <input class="form-control bg-dark border-0" type="text" placeholder="label" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="panne" name="panne">
                         </div>
                       </div>
                       <button class="btn btn-outline-primary btn-icon-text" (click)="add()"><i class=" mdi mdi-plus  btn-icon-prepend" style="margin:auto"></i></button>
                       <hr/>
-                      <button class="btn btn-sm btn-primary" type="submit">Déposer</button>
+                      <button class="btn btn-sm btn-primary" type="submit" (click)="depot()">Déposer</button>
                     </form>
                   </div>
                 </div>

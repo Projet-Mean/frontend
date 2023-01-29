@@ -16,7 +16,7 @@ interface Item {
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit{
-  selectedItem?:Item;
+  selectedItem:Item | any;
   items=[
     {
       nom: "",

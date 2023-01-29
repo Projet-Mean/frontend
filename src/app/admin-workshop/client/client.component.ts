@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
 interface Item {
+  id: string;
   nom: string;
   prenom: string;
   civilite: string;
@@ -17,9 +18,10 @@ interface Item {
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
-  selectedItem?:Item;
+  selectedItem: Item | any;
   items=[
     {
+      id:"",
       nom: "",
       prenom: "",
       civilite: "",
@@ -37,6 +39,7 @@ export class ClientComponent implements OnInit {
       for(let client of res.userclients){
         this.items.push(
           {
+            id: client._id,
             nom: client.nom,
             prenom: client.prenom,
             civilite: client.civilite,

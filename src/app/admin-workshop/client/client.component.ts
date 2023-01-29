@@ -17,7 +17,7 @@ interface Item {
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
-  selectedItem?: Item;
+  selectedItem: Item | any;
   items=[
     {
       nom: "",
@@ -30,9 +30,11 @@ export class ClientComponent implements OnInit {
       passwordconfirmation: ""
     }];
   constructor(public userServ:UserService){
+  
   }
 
   ngOnInit() {
+  
     this.userServ.GetAllclient().subscribe(res => {
       for(let client of res.userclients){
         this.items.push(
@@ -55,5 +57,6 @@ export class ClientComponent implements OnInit {
     this.selectedItem = item;
   }
       
-
 }
+
+

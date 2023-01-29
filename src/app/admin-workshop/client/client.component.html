@@ -21316,10 +21316,11 @@ dl li {
                               {{ item.nom }}
                             </td>
                             <td>
-                              {{ item.email }}
+                              {{ item.email }} 
                             </td>
                             <td>
                               <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
+                              <!-- <button class="btn btn-dark btn-rounded btn-fw"> Voir détails</button>                             -->
                             </td>
                           </tr>
                         </tbody>
@@ -21335,8 +21336,8 @@ dl li {
               <div class="col-md-12 stretch-card">
                 <div class="card">
                   <div class="card-body pb-0">
-                    <!-- <div *ngIf="selectedItem"> -->
-                      <div></div>
+                    <div *ngIf="selectedItem">
+                     
                       <p class="card-title">Profil</p>
                     <hr/>
                     <div style="width: 50%;float:left">
@@ -21347,6 +21348,14 @@ dl li {
                       <label style="min-width :30%">Client depuis : Janvier 2023 </label>
                       <label style="min-width :30%">Voiture : 1235TBH </label>
                       <label style="min-width :30%">Marque  : Renault </label>
+
+                      <!-- <label style="min-width :30%">Nom : Andrianjafy</label>
+                      <label style="min-width :30%">Prénom : Baovola</label>
+                      <label style="min-width :30%">Adresse :Ambanidia</label>
+                      <label style="min-width :30%">Adresse email  sbaovola@gmail.com </label>
+                      <label style="min-width :30%">Client depuis : Janvier 2023 </label>
+                      <label style="min-width :30%">Voiture : 1235TBH </label>
+                      <label style="min-width :30%">Marque  : Renault </label> -->
                     </div>
                     <img class="rounded-circle" src="../../../assets/images/users/4.jpg" alt="" style="width: 40%; height: 50%;margin:auto; float:right">
                     </div>

@@ -59,12 +59,5 @@ export class ClientComponent implements OnInit {
   showDetails(item : Item) {
     this.selectedItem = item;
   }
-<<<<<<< HEAD
-      
-=======
-
-
->>>>>>> 59cd6840ea032c7949a359105b5dba03d0aba758
 }
-
 

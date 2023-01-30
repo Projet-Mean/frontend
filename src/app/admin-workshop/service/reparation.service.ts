@@ -7,7 +7,7 @@ import { Userclient } from 'src/app/auth/shared/userclient.model';
   providedIn: 'root'
 })
 export class ReparationService {
-  REST_API: string = 'http://localhost:3000/api';
+  REST_API: string = 'https://backend-pelf.onrender.com/api';
 
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
@@ -43,8 +43,11 @@ export class ReparationService {
   getAllvoiture(): Observable<any> {
     return this.httpClient.get(`${this.REST_API}/cars`);
   }
-  getVoituresAt() {
+  getVoituresAt(): Observable<any>  {
     return this.httpClient.get(`${this.REST_API}/custumer`);
+  }
+  gethivoka(): Observable<any>  {
+    return this.httpClient.get(`${this.REST_API}/sorties`);
   }
   getBymatr(id:any): Observable<any> {
     return this.httpClient.get(`${this.REST_API}/api/bymatr/${id}`);

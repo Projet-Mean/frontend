@@ -1,18 +1,6 @@
 import { Component } from '@angular/core';
-import{ActivatedRoute} from '@angular/router';
+import { VoitureService } from '../../service/voiture.service';
 
-
-interface Item {
-  name: string;
-  etat: any;
-  description: string;
-  liste: degat[];
-}
-interface degat {
-  name: string;
-  etat: string;
-  description: string;
-}
 
 @Component({
   selector: 'app-deletecar',
@@ -20,20 +8,64 @@ interface degat {
   styleUrls: ['./deletecar.component.css']
 })
 export class DeletecarComponent {
-  items: Item[];
-  selectedItem: degat[] | undefined;
-
-  constructor(){
-    this.items = [
-      { name: '5864TBH',etat:25, description: '90 000 Ar', liste: [{ name: 'Moteur',etat:"En cours", description: '10 000 Ar' },
-      { name: 'frein',etat:"Fini", description: '50 000 Ar' },
-      { name: 'Vitre',etat:"En Attente", description: '30 000 Ar' }]},
-      { name: '9956TAA',etat:25, description: '90 000 Ar', liste: [{ name: 'Carrosserie',etat:"En cours", description: '10 000 Ar' }]},
-    ];
+  items=[
+    {
+      _id:"",
+      immatriculation: "",
+      id_client: "",
+      marque: "",
+      modele: "",
+      annee: "",
+      attente: true,
+      assigne: "",
+      sortie: " ",
+    }
+  ];
+  constructor(public voitServ:VoitureService){
   }
-
-  showDetails(item : Item) {
-    this.selectedItem = item.liste;
+  ngOnInit() {
+    this.items=[];
+    this.voitServ.getAllvoitureMine().subscribe(res => {
+      for(let client of res.voitureModel){
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: client.id_client,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne,
+            sortie: client.sortie
+          }
+        )
+      }
+    });
+  }
+  take(item:any){
+    item.sortie="1";
+    this.voitServ.assigne(item).subscribe(res => {
+      console.log("insert => "+res);
+    });
+    this.items=[];
+    this.voitServ.getAllvoitureMine().subscribe(res => {
+      for(let client of res.voitureModel){
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: client.id_client,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne,
+            sortie: client.sortie
+          }
+        )
+      }
+    });
   }
 
 }

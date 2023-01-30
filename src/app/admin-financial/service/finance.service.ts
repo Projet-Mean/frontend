@@ -6,7 +6,7 @@ import { Observable, catchError, map, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class FinanceService {
-  REST_API: string = 'http://localhost:3000';
+  REST_API: string = 'https://backend-pelf.onrender.com';
 
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 

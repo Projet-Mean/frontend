@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
 import { ReparationService } from '../service/reparation.service';
 import { VoitureService } from '../service/voiture.service';
-interface Voiture {
-  immatriculation: string,
-  id_client: string,
-  marque: string,
-  modele: string,
-  annee: any,
-  attente: boolean
-}
 interface Voiture2 {
   _id: string,
   immatriculation: string,
@@ -17,7 +9,8 @@ interface Voiture2 {
   modele: string,
   annee: string,
   attente: boolean,
-  assigne: string
+  assigne: string,
+  sortie: string,
 }
 interface Degat {
   reference: string,
@@ -67,7 +60,8 @@ export class ReceptionComponent {
       datesortie: " ",
       montanttotal: " ",
       status: " ",
-      assigne: " "
+      assigne: " ",
+      sortie: " ",
     }];
 
   constructor(public repServ:ReparationService,public voitServ:VoitureService){
@@ -81,7 +75,8 @@ export class ReceptionComponent {
       modele: "",
       annee: "",
       attente: true,
-      assigne: ""
+      assigne: "",
+      sortie: " ",
     }
   ];
   cli=[
@@ -111,7 +106,8 @@ export class ReceptionComponent {
             modele: client.modele,
             annee: client.annee,
             attente: client.attente,
-            assigne: client.assigne
+            assigne: client.assigne,
+            sortie: client.sortie
           }
         )
       }
@@ -144,7 +140,8 @@ export class ReceptionComponent {
       modele: this.type,
       annee: this.annee,
       attente: true,
-      assigne: " "
+      assigne: " ",
+      sortie: "0"
     }).subscribe(res => {
       console.log(res);
     });
@@ -173,7 +170,33 @@ export class ReceptionComponent {
             modele: client.modele,
             annee: client.annee,
             attente: client.attente,
-            assigne: client.assigne
+            assigne: client.assigne,
+            sortie: client.sortie
+          }
+        )
+
+      }
+    });
+    this.items=[];
+    this.repServ.getAllvoitureAt().subscribe(res => {
+      for(let client of res.voitureModel){
+        for(let cli of this.cli){
+          if(cli.id==client.id_client){
+            this.tmp=cli.nom;
+            break;
+          }
+        }
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: this.tmp,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne,
+            sortie: client.sortie
           }
         )
       }
@@ -196,7 +219,8 @@ export class ReceptionComponent {
       datesortie: " ",
       montanttotal: " ",
       status: " ",
-      assigne :" "
+      assigne :" ",
+      sortie:"0"
     });
   }
   take(item :Voiture2){
@@ -223,7 +247,8 @@ export class ReceptionComponent {
             modele: client.modele,
             annee: client.annee,
             attente: client.attente,
-            assigne: client.assigne
+            assigne: client.assigne,
+            sortie: client.sortie
           }
         )
       }

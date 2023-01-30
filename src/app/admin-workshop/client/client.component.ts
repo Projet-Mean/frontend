@@ -32,11 +32,11 @@ export class ClientComponent implements OnInit {
       passwordconfirmation: ""
     }];
   constructor(public userServ:UserService){
-  
+
   }
 
   ngOnInit() {
-  
+    this.items=[];
     this.userServ.GetAllclient().subscribe(res => {
       for(let client of res.userclients){
         this.items.push(

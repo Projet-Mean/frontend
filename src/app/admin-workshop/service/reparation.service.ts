@@ -43,8 +43,11 @@ export class ReparationService {
   getAllvoiture(): Observable<any> {
     return this.httpClient.get(`${this.REST_API}/cars`);
   }
-  getVoituresAt() {
+  getVoituresAt(): Observable<any>  {
     return this.httpClient.get(`${this.REST_API}/custumer`);
+  }
+  gethivoka(): Observable<any>  {
+    return this.httpClient.get(`${this.REST_API}/sorties`);
   }
   getBymatr(id:any): Observable<any> {
     return this.httpClient.get(`${this.REST_API}/api/bymatr/${id}`);

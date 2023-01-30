@@ -61,10 +61,16 @@ export class VoitureService {
         catchError(this.handleError)
       )
   }
-  GetAllclient(): Observable<any>{
-    return this.httpClient.get(`${this.REST_API}/api/cli/custumer`);
+  MyProfile(id: string): Observable<any> {
+    let API_URL = `${this.REST_API}/auth/userworkshop/gg`;
+    return this.httpClient.get(API_URL)
+      .pipe(
+        catchError(this.handleError)
+      )
   }
-
+  getAllvoitureMine(): Observable<any> {
+    return this.httpClient.get(`${this.REST_API}/api/carsbycli/63d51f03fff0d046f97d31ef`);
+  }
   assigne(data : Voiture2) {
     return this.httpClient.put(`${this.REST_API}/api/car/${data._id}`,data);
   }

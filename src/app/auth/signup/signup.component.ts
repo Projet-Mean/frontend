@@ -61,7 +61,7 @@ export class SignupComponent {
       (res: any) => {
         // this.success = true;
         console.log(res)
-       this.router.navigate(['/login']);
+       this.router.navigate(['/auth/login']);
       })
 
   }

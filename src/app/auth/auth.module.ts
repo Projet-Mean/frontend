@@ -6,7 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ValidateServiceService } from './shared/validate-service.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AulayoutComponent } from './aulayout/aulayout.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AuthRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
    
   ],
   providers:[ValidateServiceService],

@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 export class CrudService {
   // Node/Express API
-  REST_API: string = 'http://localhost:3000/api';
+  REST_API: string = 'http://localhost:3000/auth';
  
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
@@ -17,13 +17,22 @@ export class CrudService {
   constructor(private httpClient: HttpClient) { }
 
    // Add
-   AddUserclient(data: Userclient): Observable<any> {
+   signup(data: Userclient): Observable<any> {
     let API_URL = `${this.REST_API}/signup`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)
       )
   }
+
+     login(data: Userclient): Observable<any> {
+    let API_URL = `${this.REST_API}/login`;
+    return this.httpClient.post(API_URL, data)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
  
   // Get all objects
   GetUserclient() {

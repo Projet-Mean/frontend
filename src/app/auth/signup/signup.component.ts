@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
+import { CrudService } from './../shared/crud.service';
 import { ValidateServiceService } from './../shared/validate-service.service';
 import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
-import { CrudService } from '../shared/crud.service';
+
 import { FormGroup, FormBuilder } from "@angular/forms";
 
 
@@ -14,36 +16,40 @@ import { FormGroup, FormBuilder } from "@angular/forms";
 
 })
 export class SignupComponent {
+  success: false;
+  form : FormGroup
 
-  UserClient : FormGroup;
+
    
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
     private ngZone: NgZone,
-  //  private crudService: CrudService
+    private crudService: CrudService,
+    private http: HttpClient
   ) { 
-    this.UserClient = this.formBuilder.group({
-      nom: [''],
-      prenom: [''],
-      civilite: [''],
-      adresse:[''],
-      telephone:[],
-      email:[''],
-      password:[''],
-      passwordConfirmation:['']
+    this.form = this.formBuilder.group({
+      nom: "",
+      prenom: "",
+      civilite: "",
+      adresse:"",
+      telephone:"",
+      email:"",
+      password:"",
+      passwordconfirmation:""
     })
   }
   ngOnInit() { }
  
-  onSubmit(): any {
-    /* this.crudService.AddUserclient(this.UserClient.value)
-    .subscribe(() => {
-        console.log('Data added successfully!')
-        this.ngZone.run(() => this.router.navigateByUrl('/client'))
-      }, (err) => {
-        console.log(err);
-    }); */
+  onSubmit() {
+    this.http.post('http://localhost:3000/auth/signup', this.form.getRawValue, { withCredentials: true }).subscribe(
+      (res: any) => {
+        // this.success = true;
+        console.log(res)
+       this.router.navigate(['/login/'])
+        location.reload();
+      })
+    }
   }
 
     
@@ -78,4 +84,4 @@ export class SignupComponent {
   //   console.log(123);
   // }
 
-}
+

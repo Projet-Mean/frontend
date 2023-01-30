@@ -9,6 +9,16 @@ interface Voiture {
   annee: any,
   attente: boolean
 }
+interface Voiture2 {
+  _id: string,
+  immatriculation: string,
+  id_client: string,
+  marque: string,
+  modele: string,
+  annee: string,
+  attente: boolean,
+  assigne: string
+}
 interface Degat {
   reference: string,
   immatriculation: string,
@@ -18,6 +28,8 @@ interface Degat {
   dateentree: string,
   datesortie: string,
   montanttotal: string,
+  status: string,
+  assigne : string
 }
 @Component({
   selector: 'app-reception',
@@ -43,66 +55,66 @@ export class ReceptionComponent {
   dateentree!:string;
   datesortie!:string;
   montanttotal!:string;
+  tmp!: string;
   degats= [
     {
-      reference: "",
+      reference: " ",
       immatriculation: "",
       panne :"",
-      solution:"",
-      responsable: "",
+      solution:" ",
+      responsable: " ",
       dateentree: "",
-      datesortie: "",
-      montanttotal: ""
+      datesortie: " ",
+      montanttotal: " ",
+      status: " ",
+      assigne: " "
     }];
 
   constructor(public repServ:ReparationService,public voitServ:VoitureService){
   }
-  voitur=
-    {
-      immatriculation: "2235TBB",
-      id_client: "63d51f03fff0d046f97d31ef",
-      marque: "BMW",
-      modele: "SUV",
-      annee: "2018",
-      attente: true
-    }
   items=[
     {
+      _id:"",
       immatriculation: "",
       id_client: "",
       marque: "",
       modele: "",
       annee: "",
-    }];
-    cli=[
-      {
-        id: "",
-        nom: "",
-        prenom: "",
-        civilite: "",
-        adresse: "",
-        telephone: "",
-        email: "",
-        password: "",
-        passwordconfirmation: ""
-      }];
+      attente: true,
+      assigne: ""
+    }
+  ];
+  cli=[
+    {
+      id: "",
+      nom: "",
+      prenom: "",
+      civilite: "",
+      adresse: "",
+      telephone: "",
+      email: "",
+      password: "",
+      passwordconfirmation: ""
+    }
+  ];
   ngOnInit() {
+    this.items=[];
+    this.cli=[]
     this.repServ.getAllvoitureAt().subscribe(res => {
-      console.log(res);
-      /*for(let client of res.userclients){
+      for(let client of res.voitureModel){
         this.items.push(
           {
-            nom: client.nom,
-            prenom: client.prenom,
-            civilite: client.civilite,
-            adresse: client.adresse,
-            telephone: client.telephone,
-            email: client.email,
-            password: client.password,
-            passwordconfirmation: client.passwordconfirmation
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: client.id_client,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne
           }
         )
-      }*/
+      }
     });
     this.voitServ.GetAllclient().subscribe(res => {
       for(let client of res.userclients){
@@ -123,13 +135,16 @@ export class ReceptionComponent {
     });
   }
   depot() {
+    this.degats[this.degats.length-1].panne=this.panne;
+    this.degats[this.degats.length-1].status="En cours";
     this.voitServ.add({
       immatriculation: this.matricule,
       id_client: this.id_client,
       marque: this.marque,
       modele: this.type,
       annee: this.annee,
-      attente: true
+      attente: true,
+      assigne: " "
     }).subscribe(res => {
       console.log(res);
     });
@@ -137,22 +152,82 @@ export class ReceptionComponent {
       if(liste.panne!=""){
         liste.immatriculation=this.matricule;
         liste.dateentree=this.date_de_depot;
-        console.log(liste);
         this.insertDeg(liste);
       }
     }
+    this.items=[];
+    this.repServ.getAllvoitureAt().subscribe(res => {
+      for(let client of res.voitureModel){
+        for(let cli of this.cli){
+          if(cli.id==client.id_client){
+            this.tmp=cli.nom;
+            break;
+          }
+        }
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: this.tmp,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne
+          }
+        )
+      }
+    });
   }
   insertDeg(degat:Degat){
-    this.voitServ.addDeg(degat);
+    this.voitServ.addDeg(degat).subscribe(res => {
+      console.log("insert => "+res);
+    });
   }
   add() {
-    this.degats?.push({reference: this.reference,
-      immatriculation: this.immatriculation ,
-      panne : this.panne,
-      solution: this.solution ,
-      responsable: this.responsable,
-      dateentree: this.dateentree ,
-      datesortie: "",
-      montanttotal: ""});
+    this.degats[this.degats.length-1].panne=this.panne;
+    this.panne="";
+    this.degats?.push({reference: " ",
+      immatriculation: "",
+      panne : "",
+      solution: " ",
+      responsable: " ",
+      dateentree: "",
+      datesortie: " ",
+      montanttotal: " ",
+      status: " ",
+      assigne :" "
+    });
+  }
+  take(item :Voiture2){
+    item.attente=false;
+    item.assigne="63d55427fff0d046f97d31fe"
+    this.voitServ.assigne(item).subscribe(res => {
+      console.log("insert => "+res);
+    });
+    this.items=[];
+    this.repServ.getAllvoitureAt().subscribe(res => {
+      for(let client of res.voitureModel){
+        for(let cli of this.cli){
+          if(cli.id==client.id_client){
+            this.tmp=cli.nom;
+            break;
+          }
+        }
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: this.tmp,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne
+          }
+        )
+      }
+    });
+
   }
 }

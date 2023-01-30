@@ -21313,7 +21313,7 @@ dl li {
                         <tbody>
                           <tr *ngFor="let item of items">
                             <td class="py-1">
-                              {{ item.name }}
+                              {{ item.immatriculation }}
                             </td>
                             <td>
                               <div class="progress">
@@ -21321,7 +21321,7 @@ dl li {
                               </div>
                             </td>
                             <td>
-                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
+                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item.immatriculation)"> Voir détails</button>
                             </td>
                           </tr>
                         </tbody>
@@ -21347,7 +21347,7 @@ dl li {
                                 Dégat
                               </th>
                               <th>
-                                Deadline
+                                Date d'entrée
                               </th>
                               <th>
                                 Action
@@ -21357,13 +21357,13 @@ dl li {
                           <tbody>
                             <tr *ngFor="let degat of selectedItem">
                               <td class="py-1">
-                                {{ degat.name }}
+                                {{ degat.panne }}
                               </td>
                               <td>
-                                {{ degat.etat }}
+                                {{ degat.dateentree }}
                               </td>
                               <td>
-                                <button class="btn btn-success btn-rounded btn-fw" ><i class=" mdi mdi-marker-check "></i> Fait</button>
+                                <button class="btn btn-success btn-rounded btn-fw" (click)="finir(degat)"><i class=" mdi mdi-marker-check "></i> Fait</button>
                               </td>
                             </tr>
                           </tbody>

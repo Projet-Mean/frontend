@@ -39,7 +39,7 @@ interface Degat {
   providedIn: 'root'
 })
 export class VoitureService {
-  REST_API: string = 'http://localhost:3000';
+  REST_API: string = 'https://backend-pelf.onrender.com';
 
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 

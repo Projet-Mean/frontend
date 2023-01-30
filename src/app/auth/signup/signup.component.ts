@@ -42,7 +42,7 @@ export class SignupComponent {
   ngOnInit() { }
  
   onSubmit() {
-    this.http.post('http://localhost:3000/auth/signup', this.form.getRawValue, { withCredentials: true }).subscribe(
+    this.http.post('https://backend-pelf.onrender.com/auth/signup', this.form.getRawValue, { withCredentials: true }).subscribe(
       (res: any) => {
         // this.success = true;
         console.log(res)

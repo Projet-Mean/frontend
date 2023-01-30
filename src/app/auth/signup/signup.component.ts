@@ -42,12 +42,21 @@ export class SignupComponent {
   ngOnInit() { }
  
   onSubmit() {
-    this.http.post('https://backend-pelf.onrender.com/auth/signup', this.form.getRawValue, { withCredentials: true }).subscribe(
+    const item= {
+      nom: this.form.get('nom')?.value,
+      prenom: this.form.get('prenom')?.value,
+      civilite: this.form.get('civilite')?.value,
+      adresse: this.form.get('adresse')?.value,
+      telephone: this.form.get('telephone')?.value,
+      email: this.form.get('email')?.value,
+      password: this.form.get('password')?.value,
+      passwordconfirmation: this.form.get('passwordconfirmation')?.value
+    }
+    this.http.post('http://localhost:3000/auth/signup', item).subscribe(
       (res: any) => {
         // this.success = true;
         console.log(res)
-       this.router.navigate(['/login/'])
-        location.reload();
+       this.router.navigate(['/login']);
       })
     }
   }

@@ -22,7 +22,8 @@ interface Degat {
   datesortie: string,
   montanttotal: string,
   status: string,
-  assigne : string
+  assigne : string,
+  id_cli : string
 }
 @Component({
   selector: 'app-reception',
@@ -39,6 +40,7 @@ export class ReceptionComponent {
   label!:string;
   description!:string;
   photo!:string;
+  message!:string;
 
   reference="";
   immatriculation!:string;
@@ -62,6 +64,7 @@ export class ReceptionComponent {
       status: " ",
       assigne: " ",
       sortie: " ",
+      id_cli: " "
     }];
 
   constructor(public repServ:ReparationService,public voitServ:VoitureService){
@@ -201,6 +204,7 @@ export class ReceptionComponent {
         )
       }
     });
+    this.message="Succes!!"
   }
   insertDeg(degat:Degat){
     this.voitServ.addDeg(degat).subscribe(res => {
@@ -220,7 +224,8 @@ export class ReceptionComponent {
       montanttotal: " ",
       status: " ",
       assigne :" ",
-      sortie:"0"
+      sortie:"0",
+      id_cli: " ",
     });
   }
   take(item :Voiture2){

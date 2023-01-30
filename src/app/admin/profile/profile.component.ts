@@ -16,13 +16,13 @@ export class ProfileComponent {
   constructor(public userServ:VoitureService){}
 
   ngOnInit() {
-    this.userServ.MyProfile("1").subscribe(res => {
-      this.nom= res['nom'];
-      this.prenom= res['prenom'];
-      this.civilite= res['civilite'];
-      this.adresse= res['adresse'];
-      this.telephone= res['telephone'];
-      this.email= res['email'];
+    this.userServ.MyProfile().subscribe(res => {
+      this.nom= res.userclients.nom;
+      this.prenom= res.userclients.prenom;
+      this.civilite= res.userclients.civilite;
+      this.adresse= res.userclients.adresse;
+      this.telephone= res.userclients.telephone;
+      this.email= res.userclients.email;
     });
   }
 }

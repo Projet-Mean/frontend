@@ -1,16 +1,6 @@
 import { Component } from '@angular/core';
+import { VoitureService } from '../service/voiture.service';
 
-interface Item {
-  name: string;
-  etat: string;
-  description: string;
-  liste: degat[];
-}
-interface degat {
-  name: string;
-  etat: string;
-  description: string;
-}
 
 @Component({
   selector: 'app-facture',
@@ -18,19 +8,64 @@ interface degat {
   styleUrls: ['./facture.component.css']
 })
 export class FactureComponent {
-  items: Item[];
-  selectedItem: degat[] | undefined;
+  selectedItem: any;
 
-  constructor(){
-    this.items = [
-      { name: '5864TBH',etat:"Non Payée", description: '90 000 Ar', liste: [{ name: 'Moteur',etat:"En cours", description: '10 000 Ar' },
-      { name: 'frein',etat:"Fini", description: '50 000 Ar' },
-      { name: 'Vitre',etat:"En Attente", description: '30 000 Ar' }]},
-      { name: '9956TAA',etat:"Payée", description: '10 000 Ar', liste: [{ name: 'Carrosserie',etat:"Finie", description: '10 000 Ar' }]},
-    ];
+  items=[
+    {
+      _id:"",
+      immatriculation: "",
+      id_client: "",
+      marque: "",
+      modele: "",
+      annee: "",
+      attente: true,
+      assigne: "",
+      sortie: " ",
+    }
+  ];
+  constructor(public voitServ:VoitureService){
+  }
+  ngOnInit() {
+    this.items=[];
+    this.voitServ.getAllvoitureMine().subscribe(res => {
+      for(let client of res.voitureModel){
+        this.items.push(
+          {
+            _id: client._id,
+            immatriculation: client.immatriculation,
+            id_client: client.id_client,
+            marque: client.marque,
+            modele: client.modele,
+            annee: client.annee,
+            attente: client.attente,
+            assigne: client.assigne,
+            sortie: client.sortie
+          }
+        )
+      }
+    });
   }
 
-  showDetails(item : Item) {
-    this.selectedItem = item.liste;
+  showDetails(id : string) {
+    this.selectedItem=[];
+    this.voitServ.getBymatr(id).subscribe(res => {
+      
+      for(let client of res.reparationsModel){
+        this.selectedItem.push(
+          {
+            _id:client._id,
+            reference: client.reference,
+            immatriculation: client.immatriculation,
+            panne :client.panne,
+            solution:client.solution,
+            responsable: client.responsable,
+            dateentree: client.dateentree,
+            datesortie: client.datesortie,
+            montanttotal: client.montanttotal,
+            status:client.status
+          }
+        )
+      }
+    });
   }
 }

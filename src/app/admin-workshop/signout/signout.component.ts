@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signout',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./signout.component.css']
 })
 export class SignoutComponent {
-
+  constructor(
+    private router: Router,
+  ) { 
+    
+  }
+  ngOnInit() {
+    this.router.navigate(['/']);
+  }
 }

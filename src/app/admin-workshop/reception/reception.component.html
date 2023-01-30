@@ -21296,6 +21296,8 @@ dl li {
                   <div class="card-body">
                     <p class="card-title">Ajouter Voiture</p>
                     <hr/>
+                    <div *ngIf="message" style="border: 2px solid green ;border-radius:10px; padding:5px; margin-bottom:5px">{{message}}</div>
+                    
                     <form method="GET" style="padding: 20px;text-align:center" >
                       <div style="border: 2px solid lightgrey;border-radius:10px; padding:5px; margin-bottom:5px">
                         <label style="float: left;width:150px;margin-left: 5%;">Client :</label><select class="form-control bg-dark border-0" placeholder="Client" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="id_client" name="id" *ngIf="cli"><option *ngFor="let clis of cli" value="{{clis.id}}" >{{clis.nom}}</option></select>

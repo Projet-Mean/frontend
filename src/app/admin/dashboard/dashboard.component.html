@@ -21296,12 +21296,23 @@ dl li {
                   <div class="card-body">
                     <p class="card-title">Ajouter Voiture</p>
                     <hr/>
-                    <form (submit)="depot()" method="GET" style="padding: 20px;" >
-                      <label style="float: left;width:150px;margin-left: 5%;">Matricule:</label> <input class="form-control bg-dark border-0" type="text" placeholder="Matricule" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="matricule" name="matricule">
-                      <label style="float: left;width:150px;margin-left: 5%;">Marque:</label><select class="form-control bg-dark border-0" placeholder="Marque" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="marque" name="marque"><option value="#">Marque</option><option value="Honda">Honda</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option></select>
-                      <label style="float: left;width:150px;margin-left: 5%;">Type:</label><select class="form-control bg-dark border-0" placeholder="type" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="type" name="type"><option value="#">Type</option><option value="Berline">Berline</option><option value="SUV">SUV</option><option value="Fourgonnette">Fourgonnette</option></select>
-                      <label style="float: left;width:150px;margin-left: 5%;">Date de depôts:</label><input class="form-control bg-dark border-0" placeholder="Date de dépot" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="date_de_depot" type="date" placeholder="Date de depot" name="date">
-                      <button class="btn btn-sm btn-primary" type="submit">Déposer</button>
+                    <div *ngIf="message" style="border: 2px solid green ;border-radius:10px; padding:5px; margin-bottom:5px">{{message}}</div>
+                    <form method="GET" style="padding: 20px;text-align:center" >
+                      <div style="border: 2px solid lightgrey;border-radius:10px; padding:5px; margin-bottom:5px">
+                        <label style="float: left;width:150px;margin-left: 5%;">Matricule :</label> <input class="form-control bg-dark border-0" type="text" placeholder="Matricule" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="matricule" name="matricule">
+                        <label style="float: left;width:150px;margin-left: 5%;">Marque :</label><select class="form-control bg-dark border-0" placeholder="Marque" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="marque" name="marque"><option value="#">Marque</option><option value="Honda">Honda</option><option value="Jeep">Jeep</option><option value="Kia">Kia</option></select>
+                        <label style="float: left;width:150px;margin-left: 5%;">Type :</label><select class="form-control bg-dark border-0" placeholder="type" style="margin-bottom: 10px;width: 53%;margin-left: 10;color:white" [(ngModel)]="type" name="type"><option value="#">Type</option><option value="Berline">Berline</option><option value="SUV">SUV</option><option value="Fourgonnette">Fourgonnette</option></select>
+                        <label style="float: left;width:150px;margin-left: 5%;">Année :</label><input class="form-control bg-dark border-0" type="numbre" min="1900" max="2024" placeholder="Année" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="annee" name="annee">
+                        <label style="float: left;width:150px;margin-left: 5%;">Date de depôts :</label><input class="form-control bg-dark border-0" placeholder="Date de dépot" style="margin-bottom: 10px;width: 53%;margin-left: 10%;color:white" [(ngModel)]="date_de_depot" type="date" placeholder="Date de depot" name="date">
+                      </div>
+                      <div *ngIf="degats">
+                        <div style="border: 2px solid lightgrey;border-radius:10px; padding:5px; margin-bottom:5px" *ngFor="let degat of degats">
+                          <label style="float: left;width:150px;margin-left: 5%;">Dégât :</label> <input class="form-control bg-dark border-0" type="text" placeholder="label" style="margin-bottom: 10px;width: 53%;margin-left: 10%;" [(ngModel)]="panne" name="panne">
+                        </div>
+                      </div>
+                      <button class="btn btn-outline-primary btn-icon-text" (click)="add()"><i class=" mdi mdi-plus  btn-icon-prepend" style="margin:auto"></i></button>
+                      <hr/>
+                      <button class="btn btn-sm btn-primary" type="submit" (click)="depot()">Déposer</button>
                     </form>
                   </div>
                 </div>
@@ -21315,61 +21326,34 @@ dl li {
                   <div class="card-body pb-0">
                     <p class="card-title">Historique de Réparation</p>
                     <div class="d-flex justify-content-between flex-wrap">
-                      <p class="text-muted">Last update: 2 Hours ago</p>
+                      <p class="text-muted">Dernier mis à jour</p>
                       <table class="table table-striped">
                         <thead>
                           <tr>
+                            <th>
+                              Voiture
+                            </th>
                             <th>
                               Réparation
                             </th>
                             <th>
                               Etat
                             </th>
-                            <th>
-                              Payment
-                            </th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr *ngFor="let voit of cli">
                             <td>
-                              Herman Beck
+                              {{voit.immatriculation}}
                             </td>
                             <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
+                              {{voit.panne}}
                             </td>
                             <td>
-                              $ 77.99
+                              {{voit.status}}
                             </td>
                           </tr>
-                          <tr>
-                            <td>
-                              Messsy Adam
-                            </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                            <td>
-                              $245.30
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              John Richards
-                            </td>
-                            <td>
-                              <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </td>
-                            <td>
-                              $138.00
-                            </td>
-                          </tr>
+                          
                         </tbody>
                       </table>
                     </div>

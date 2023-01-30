@@ -25,12 +25,13 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.userServ.MyProfile("1").subscribe(res => {
-      this.nom= res['nom'];
-      this.prenom= res['prenom'];
-      this.civilite= res['civilite'];
-      this.adresse= res['adresse'];
-      this.telephone= res['telephone'];
-      this.email= res['email'];
+      console.log(res);
+      this.nom= res.userworkshop.nom;
+      this.prenom= res.userworkshop.prenom;
+      this.civilite= res.userworkshop.civilite;
+      this.adresse= res.userworkshop.adresse;
+      this.telephone= res.userworkshop.telephone;
+      this.email= res.userworkshop.email;
     });
   }
 }

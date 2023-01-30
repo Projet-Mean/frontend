@@ -49,7 +49,7 @@ export class EtatComponent {
   showDetails(id : string) {
     this.selectedItem=[];
     this.repServ.getBymatr(id).subscribe(res => {
-      this.selectedItem.push(
+      /*this.selectedItem.push(
         {
           _id:res.reparationsModel._id,
           reference: res.reparationsModel.reference,
@@ -62,16 +62,23 @@ export class EtatComponent {
           montanttotal: res.reparationsModel.montanttotal,
           status:res.reparationsModel.status
         }
-      )
-      /*for(let client of res.reparationsModel){
+      )*/
+      for(let client of res.reparationsModel){
         this.selectedItem.push(
           {
-            _id: client._id,
-            name: client.panne,
-            etat: client.status
+            _id:client._id,
+            reference: client.reference,
+            immatriculation: client.immatriculation,
+            panne :client.panne,
+            solution:client.solution,
+            responsable: client.responsable,
+            dateentree: client.dateentree,
+            datesortie: client.datesortie,
+            montanttotal: client.montanttotal,
+            status:client.status
           }
         )
-      }*/
+      }
     });
   }
   finir(id:any){

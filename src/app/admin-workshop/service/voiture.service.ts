@@ -34,6 +34,7 @@ interface Degat {
   montanttotal: string,
   status : string,
   assigne : string,
+  id_cli: string
 }
 @Injectable({
   providedIn: 'root'

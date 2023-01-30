@@ -21303,7 +21303,7 @@ dl li {
                               Matricule
                             </th>
                             <th>
-                              Etat
+                              Progression
                             </th>
                             <th>
                               Action
@@ -21313,7 +21313,7 @@ dl li {
                         <tbody>
                           <tr *ngFor="let item of items">
                             <td class="py-1">
-                              {{ item.name }}
+                              {{ item.immatriculation }}
                             </td>
                             <td>
                               <div class="progress">
@@ -21321,7 +21321,7 @@ dl li {
                               </div>
                             </td>
                             <td>
-                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item)"> Voir détails</button>
+                              <button class="btn btn-dark btn-rounded btn-fw" (click)="showDetails(item.immatriculation)"> Voir détails</button>
                             </td>
                           </tr>
                         </tbody>
@@ -21347,34 +21347,27 @@ dl li {
                                 Dégat
                               </th>
                               <th>
-                                Etat
+                                Date d'entrée
                               </th>
                               <th>
-                                Coût
+                                A payer
                               </th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr *ngFor="let degat of selectedItem">
                               <td class="py-1">
-                                {{ degat.name }}
+                                {{ degat.panne }}
                               </td>
                               <td>
-                                {{ degat.etat }}
+                                {{ degat.dateentree }}
                               </td>
-                              <td>
-                                {{ degat.description }}
-                              </td>
+                              <td>{{ degat.montanttotal }}</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                      <div style="float:left">
-                        <p>Mecanicien : Mecano</p>
-                        <p>Deadline : 29 JAN 2023</p>
-                        <p>Somme à paryer : 90 000 Ar</p>
-                      </div>
-                      <div style="float:right">
+                      <div style="border: 2px solid green ;border-radius:10px; padding:5px; margin-bottom:5px;text-align:center">
                         <a class="btn btn-succes btn-rounded btn-fw" [routerLink]="['paye']"> Accéder au payement</a>
                       </div>
                     </div>

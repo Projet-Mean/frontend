@@ -1,10 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { CrudService } from './../shared/crud.service';
-import { ValidateServiceService } from './../shared/validate-service.service';
 import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { FormGroup, FormBuilder } from "@angular/forms";
+import { VoitureService } from 'src/app/admin/service/voiture.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,14 +13,11 @@ export class LoginComponent {
   success: false;
   form : FormGroup
 
-
-   
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
-    private ngZone: NgZone,
-   private crudService: CrudService,
-   private http: HttpClient
+    private http: HttpClient,
+    public voitServ:VoitureService
   ) { 
     this.form = this.formBuilder.group({
      
@@ -31,12 +27,15 @@ export class LoginComponent {
     })
   }
 onSubmit() {
-  this.http.post('https://backend-pelf.onrender.com/auth/login', this.form.getRawValue, { withCredentials: true }).subscribe(
+  const item= {
+    email: this.form.get('email')?.value,
+    password: this.form.get('password')?.value
+  }
+  this.http.post('http://localhost:3000/auth/login', item).subscribe(
     (res: any) => {
-      // this.success = true;
       console.log(res)
-     this.router.navigate(['/admin'])
-      location.reload();
+      this.voitServ.id=res.userId;
+     this.router.navigate(['/admin'],res.userId);
     })
   }
 }

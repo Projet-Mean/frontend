@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { ReparationComponent } from './reparation/reparation.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ReparationComponent } from './reparation/reparation.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    NgImageSliderModule
   ]
 })
 export class HomeModule { }

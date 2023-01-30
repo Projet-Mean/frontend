@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card'; 
+import { NgImageSliderModule } from 'ng-image-slider';
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import {MatCardModule} from '@angular/material/card';
     ReactiveFormsModule,
     RouterModule,
     MatCardModule,
+    NgImageSliderModule
     
 
   ],

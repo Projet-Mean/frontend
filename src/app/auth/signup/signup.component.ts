@@ -18,6 +18,8 @@ import { FormGroup, FormBuilder } from "@angular/forms";
 export class SignupComponent {
   success: false;
   form : FormGroup
+  isAuth=false //mode dev
+  id=-1
 
 
    
@@ -41,6 +43,9 @@ export class SignupComponent {
   }
   ngOnInit() { }
  
+
+ 
+
   onSubmit() {
     const item= {
       nom: this.form.get('nom')?.value,
@@ -52,14 +57,19 @@ export class SignupComponent {
       password: this.form.get('password')?.value,
       passwordconfirmation: this.form.get('passwordconfirmation')?.value
     }
-    this.http.post('http://localhost:3000/auth/signup', item).subscribe(
+    this.http.post('https://backend-pelf.onrender.com/auth/signup', item).subscribe(
       (res: any) => {
         // this.success = true;
         console.log(res)
        this.router.navigate(['/login']);
       })
-    }
+
   }
+  deconnexion():void{
+    this.isAuth=false;
+    this.id=-1;
+  }
+}
 
     
   

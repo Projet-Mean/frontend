@@ -23,7 +23,7 @@ export class LoginComponent {
      
       email:"",
       password:"",
-   
+  
     })
   }
 onSubmit() {
